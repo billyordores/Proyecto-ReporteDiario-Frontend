@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header{
+    height: 100px;
+    background-color: #008ED0;
+}
+
+.Title{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    transform: translateX(-5%) translateY(50%);
+}
+
+.Logo{
+    width: 230px;
+    height: auto;
+    float: left;
+    transform: translateX(10%) translateY(23%);
+}
