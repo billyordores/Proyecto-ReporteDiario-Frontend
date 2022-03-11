@@ -22,3 +22,56 @@
     float: left;
     transform: translateX(10%) translateY(23%);
 }
+
+.Contens{
+    height: 400px;
+    background-color: #fff;
+}
+
+.category h3{
+    width: auto;
+    height: 50px;
+    font-size: 12px;
+    line-height: 45px;
+    margin-top: 30px;
+    background: #8C8C8C;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.To_check{
+    height: 500px; /*Alto*/
+    width: 350px;   /*Ancho*/
+    background-color: #fff;
+    border: black solid 1px;
+    transform: translateX(5%) translateY(3%);
+    text-align: center;
+    color: black;
+}
+
+.Check{
+    height: 500px; /*Alto*/
+    width: 350px;   /*Ancho*/
+    background-color: #fff;
+    border: black solid 1px;
+    transform: translateX(110%) translateY(-4.6%);
+    text-align: center;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Por_revisar{
+    height: auto;
+    width: auto;
+    border: black solid 2px;
+}
+
+.Revisadas{
+    height: auto;
+    width: auto;
+    border: black solid 2px;   
+}
