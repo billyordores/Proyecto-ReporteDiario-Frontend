@@ -3,28 +3,28 @@
         {
             "id_aula": 1,
             "nombre": "0.2",
-            "obejtos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
         },
         {
             "id_aula": 2,
             "nombre": "0.4",
-            "obejtos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces", "mando proyector"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces", "mando proyector"]
         },{
             "id_aula": 3,
             "nombre": "0.6",
-            "obejtos":["teclado", "raton", "windows activado", "office activado"]
+            "objetos":["teclado", "raton", "windows activado", "office activado"]
         },{
             "id_aula": 4,
             "nombre": "0.8",
-            "obejtos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
         },{
             "id_aula": 5,
             "nombre": "0.10",
-            "obejtos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
         },{
             "id_aula": 6,
             "nombre": "0.12",
-            "obejtos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
         }
     ]
 }
