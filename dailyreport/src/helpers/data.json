@@ -1,5 +1,4 @@
 {
-    "aulas":[
         {
             "id_aula": 1,
             "nombre": "0.2",
@@ -26,5 +25,4 @@
             "nombre": "0.12",
             "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
         }
-    ]
 }
