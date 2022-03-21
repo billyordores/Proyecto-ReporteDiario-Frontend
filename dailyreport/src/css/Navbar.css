@@ -5,19 +5,20 @@
 }
 
 .Header{
-    height: 100px;
+    height: 5vw;
     background-color: #008ED0;
+    text-align: center;
 }
 
 .Title{
     color: #fff;
-    font-size: 40px;
-    text-align: center;
+    font-size: 2.3vw;
+    /*text-align: center;*/
     transform: translateX(-5%) translateY(50%);
 }
 
 .Logo{
-    width: 230px;
+    width: 13vw;
     height: auto;
     float: left;
     transform: translateX(10%) translateY(23%);

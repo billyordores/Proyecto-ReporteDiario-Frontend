@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../css/Navbar.css'
 
+/**ESTE ES EL ENCABEZDO DE LA PAGINA */
+
 class Navbar extends Component{
     render(){
         return(
