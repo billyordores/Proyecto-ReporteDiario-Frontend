@@ -10,9 +10,7 @@ const Home = () => {
         <>
             <div>
                 <Navbar/>
-                <p>Esta es una pagina creada por Billy Ordores, Madeline Trejos y Juan Ixcopal
-                    becarios del departamento de Intervensión Ágil pendiente a nuevos participantes del proyecto :D
-                </p>
+                <p>Este es el home</p>
             </div>
         </>
         )
