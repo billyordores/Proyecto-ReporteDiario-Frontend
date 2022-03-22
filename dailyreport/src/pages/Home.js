@@ -10,7 +10,7 @@ const Home = () => {
         <>
             <div>
                 <Navbar/>
-                <p>Este es el home</p>
+                <p>Hola, este es el Home</p>
             </div>
         </>
         )
