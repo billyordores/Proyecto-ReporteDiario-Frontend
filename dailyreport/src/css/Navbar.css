@@ -26,9 +26,14 @@
 
 .routesPage{
     background-color: #008ED0;
-    border: black solid 1px; /*Eliminar despues*/
     width: auto;
-    height: auto;
+    height: 1.6vw;
+    font-size: 1.2vw;
+    justify-content: space-around;
     display: flex;
-    justify-content: center;
+}
+
+.routesPage a{
+    text-decoration: none;
+    color: #AED6F1;
 }

@@ -10,7 +10,10 @@ const Home = () => {
         <>
             <div>
                 <Navbar/>
-                <p>Hola, este es el Home</p>
+                <div className='pageHome'>
+                    <p>Hola, este es el Home</p>
+                </div>
+                
             </div>
         </>
         )

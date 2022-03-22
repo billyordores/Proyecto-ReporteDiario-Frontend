@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Navbar.css'
+import { Link } from 'react-router-dom';
 
 /**ESTE ES EL ENCABEZDO DE LA PAGINA */
 
@@ -13,9 +14,9 @@ class Navbar extends Component{
                 </div>
 
                 <div className='routesPage'>
-                    <a href='/home'>Home</a>
-                    <a href='/plantas'>Plantas</a>
-                    <a href='*'>Otros</a>
+                    <a><Link to='/home'>Home</Link></a>
+                    <Link to='/plantas'>Plantas</Link>
+                    <Link to='*'>Otros</Link>     
                 </div>
             </div>
         )
