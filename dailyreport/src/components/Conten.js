@@ -6,16 +6,20 @@ class Conten extends Component{
     render(){
         return(
             <div className="Conten">
-                <button className='Plant1' >Planta 1</button>
-                <button className='Plant0' >Planta 0</button>
-                <button className='Plant-1' >Planta -1</button>
-                <button className='Plant-2' >Planta -2</button>
+                <p>Aqui iran las plantas</p>
             </div>
         )
     }
 }
 
 export default Conten;
+
+/**
+ * <button className='Plant1' >Planta 1</button>
+                <button className='Plant0' >Planta 0</button>
+                <button className='Plant-1' >Planta -1</button>
+                <button className='Plant-2' >Planta -2</button>
+ */
 
 
 /**

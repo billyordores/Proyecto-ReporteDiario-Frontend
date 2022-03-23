@@ -1,41 +1,9 @@
 .Conten{
-    height: 12vw;
+    height: 7vw;
     width: auto;
     background: pink;
 }
 
-.Plant1{
-    width: 100%;
-    height: 2vw;
-    background-color: #8c8c8c;
-    /*border: #8c8c8c solid 1px;*/
-    transform: translateY(20%);
-    font-size: 1vw;
-}
-
-.Plant0{
-    width: 100%;
-    height: 2vw;
-    background-color: #8c8c8c;
-    /*border: #8c8c8c solid 1px;*/
-    transform: translateY(50%);
-    font-size: 1vw;
-}
-
-.Plant-1{
-    width: 100%;
-    height: 2vw;
-    background-color: #8c8c8c;
-    /*border: #8c8c8c solid 1px;*/
-    transform: translateY(90%);
-    font-size: 1vw;
-}
-
-.Plant-2{
-    width: 100%;
-    height: 2vw;
-    background-color: #8c8c8c;
-    /*border: #8c8c8c solid 1px;*/
-    transform: translateY(130%);
+p{
     font-size: 1vw;
 }

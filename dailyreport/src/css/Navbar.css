@@ -27,8 +27,8 @@
 .routesPage{
     background-color: #008ED0;
     width: auto;
-    height: 1.6vw;
-    font-size: 1.2vw;
+    height: 2vw;
+    font-size: 1.5vw;
     justify-content: space-around;
     display: flex;
 }
