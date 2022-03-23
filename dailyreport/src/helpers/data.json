@@ -2,12 +2,12 @@
         {
             "id_aula": 1,
             "nombre": "Aula 0.2",
-            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "altavoces"]
         },
         {
             "id_aula": 2,
             "nombre": "Aula 0.4",
-            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces", "mando proyector"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "altavoces", "mando proyector"]
         },{
             "id_aula": 3,
             "nombre": "Aula 0.6",
@@ -15,14 +15,14 @@
         },{
             "id_aula": 4,
             "nombre": "Aula 0.8",
-            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "altavoces"]
         },{
             "id_aula": 5,
             "nombre": "Aula 0.10",
-            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "altavoces"]
         },{
             "id_aula": 6,
             "nombre": "Aula 0.12",
-            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "atavoces"]
+            "objetos":["teclado", "raton", "windows activado", "office activado", "proyector", "altavoces"]
         }
 ]

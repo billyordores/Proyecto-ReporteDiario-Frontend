@@ -2,17 +2,27 @@ import React, { Component, useState } from 'react';
 import '../css/Conten.css'
 import Data from '../helpers/data.json';
 
-class Conten extends Component{
-    render(){
+const Conten = () =>{
         return(
             <div className="Conten">
-                <button className='Plant1' >Planta 1</button>
-                <button className='Plant0' >Planta 0</button>
-                <button className='Plant-1' >Planta -1</button>
-                <button className='Plant-2' >Planta -2</button>
+                <p>Hola, aqui van las plantas</p>
+                {Data.map(aulas=>{
+                    return(
+                        <div key={aulas.id}>  
+                        <div className='NameClassroom'><h4>{aulas.nombre}</h4></div>
+                        <div className='NameObjectClassroom'>
+                            {aulas.objetos.map(objeto=> 
+                                <div className='Checkbox'>
+                                    <input type='checkbox'/>
+                                    <label className='ObjectLabel'>{objeto}</label>
+                                </div>
+                            )}
+                        </div>
+                        </div>
+                    )
+                })}
             </div>
         )
-    }
 }
 
 export default Conten;
