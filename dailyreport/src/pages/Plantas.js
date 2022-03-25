@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
-import Conten from '../components/Conten'
+import React from 'react'
+import BtnPlants from '../components/BtnPlants.js'
 import Navbar from '../components/Navbar'
 import '../css/Plantas.css'
 
-class Plantas extends Component{
-    render(){
+const Plantas = () =>{
         return(
             <div>
                 <Navbar/>
-                <Conten/>
+                <BtnPlants/>
             </div>
         )
-    }
 }
 
 export default Plantas;
