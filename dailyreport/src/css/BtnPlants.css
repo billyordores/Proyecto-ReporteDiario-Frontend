@@ -35,7 +35,7 @@
 }
 
 .To_check{
-    height: 26.1vw; /*Alto*/
+    height: 26.1vw; /*Alto LUEGO PASAR A AUTO*/
     width: 18.3vw;   /*Ancho*/
     background-color: #fff;
     border: black solid 1px;
@@ -46,7 +46,7 @@
 }
 
 .Check{
-    height: 26.1vw; /*Alto*/
+    height: 26.1vw; /*Alto LUEGO PASAR A AUTO*/
     width: 18.3vw;   /*Ancho*/
     background-color: #fff;
     border: black solid 1px;
@@ -59,19 +59,19 @@
 .Por_revisar{
     height: auto;
     width: auto;
-    border: black solid 2px;
+    border: black solid 1px;
     /*background-color: blue;*/
 }
 
 .Revisadas{
     height: auto;
     width: auto;
-    border: black solid 2px;
+    border: black solid 1px;
     /*background-color: blue;*/   
 }
 
 .Dates{
-    height: 27vw;
+    height: auto;
     width: auto;
     /*background-color: pink;*/
     display: flex;

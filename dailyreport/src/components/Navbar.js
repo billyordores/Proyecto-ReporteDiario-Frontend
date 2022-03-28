@@ -14,7 +14,7 @@ class Navbar extends Component{
                 </div>
 
                 <div className='routesPage'>
-                    <a><Link to='/'>Home</Link></a>
+                    <a><Link to='/home'>Home</Link></a>
                     <Link to='/plantas'>Plantas</Link>
                     <Link to='/inventario'>Inventario</Link>     
                 </div>
