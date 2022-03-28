@@ -5,9 +5,10 @@ var mysql      = require('mysql');
 
 var connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'madelinetrejos',
-    password : 'SCscV8t8',
-    database : 'db_dailyreport'
+    port     : '3306',
+    user     : 'dr_root',
+    password : 'Uneatlantico22',
+    database : 'db_daily_report'
 });
  
 connection.connect(function(err) {
@@ -43,7 +44,7 @@ router.get("/enviar", (request, response)=>{
 
 router.get("/aulas", (request, response)=>{
   
-       connection.query(`SELECT * FROM db_dailyreport.tb_aulas`, function (error, results, fields) {
+       connection.query(`SELECT * FROM tb_aulas`, function (error, results, fields) {
          if (error) throw error;
          // console.log('The solution is: ', results[0].solution);
          response.send(results)
@@ -53,7 +54,7 @@ router.get("/aulas", (request, response)=>{
  
  router.get("/inventario", (request, response)=>{
   
-  connection.query(`SELECT * FROM db_dailyreport.tb_inventario`, function (error, results, fields) {
+  connection.query(`SELECT * FROM tb_inventario`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -63,7 +64,7 @@ router.get("/aulas", (request, response)=>{
 
 router.put("/aulas", (request, response)=>{
   
-  connection.query(`INSERT INTO db_dailyreport.tb_aulas (nombre) VALUES ('0.4')`, function (error, results, fields) {
+  connection.query(`INSERT INTO tb_aulas (nombre) VALUES ('0.4')`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -73,7 +74,7 @@ router.put("/aulas", (request, response)=>{
 
 router.put("/inventario", (request, response)=>{
   
-  connection.query(`INSERT INTO db_dailyreport.tb_inventario (tipo_objeto) VALUES ('HDMI')`, function (error, results, fields) {
+  connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ('HDMI')`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
