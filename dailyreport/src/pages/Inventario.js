@@ -7,7 +7,7 @@ const Inventario = () =>{
             <div>
                 <Navbar/>
                 <div className='pagesInventory'>
-                  <p>Hola aqui se debe de hacer el inventario de las aulas</p>
+                  <p>AQUI SE TRABAJARA EL INVENTARIO DE LAS AULAS POR ALE :)</p>
                 </div>
             </div>
         )

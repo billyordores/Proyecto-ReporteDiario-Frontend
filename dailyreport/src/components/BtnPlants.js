@@ -33,17 +33,24 @@ const BtnPlants = () =>{
                                     <a>POR REVISAR</a>
                                 </div>
                                 {Data.map(aulas=>{
-        return(
-            <div key={aulas.id}>
-                <h4>{aulas.nombre}</h4>
-            </div>
-        )
-    })}
+                                return(
+                                    <div key={aulas.id}>
+                                        <h4>{aulas.nombre}</h4>
+                                    </div>
+                                )
+                            })}
                             </div>
                                 <div className='Check'>
                                     <div className='Revisadas'>
                                         <a>REVISADAS</a>
                                     </div>
+                                    {Data.map(aulas=>{
+                                return(
+                                    <div key={aulas.id}>
+                                        <h4>{aulas.nombre}</h4>
+                                    </div>
+                                )
+                            })}
                                 </div>
                         </div>
                     ]} />
