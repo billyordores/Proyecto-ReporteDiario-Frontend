@@ -5,7 +5,7 @@ controller.test = (request, response) => {
     console.log(request.body)
     response.send({
         message: mensajeRecibido,
-        mensajedesdeelservidor:"hey lo he recibido:)"
+        mensajedesdeelservidor:"hey lo he recibido :)"
     })
 }
 

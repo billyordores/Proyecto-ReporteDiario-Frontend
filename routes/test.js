@@ -32,25 +32,13 @@ router.get("/enviar", (request, response)=>{
       connection.query(`SELECT tbai.*, tba.*,  tbi.* FROM tb_aula_inventario tbai, tb_aulas tba, tb_inventario tbi
       WHERE tbai.id_aula = tba.id_aula
       AND tbai.id_objeto = tbi.id_objeto
-      AND tba.nombre = ?`,[nombre], function (error, results, fields) {
+      ${ nombre ? 'AND tba.nombre = ?': ''}`,[nombre], function (error, results, fields) {
         if (error) throw error;
         // console.log('The solution is: ', results[0].solution);
         response.send(results)
       });
       
 })
-
-router.get("/enviar", (request, response)=>{
- 
-       connection.query(`SELECT * FROM db_dailyreport.tb_aulas, nombre = ?`,[nombre], function (error, results, fields) {
-         if (error) throw error;
-         // console.log('The solution is: ', results[0].solution);
-         response.send(results)
-       });
-       
- })
- 
-  
 
 
 router.get("/aulas", (request, response)=>{
@@ -92,7 +80,6 @@ router.put("/inventario", (request, response)=>{
   });
   
 }) 
-
 
 
 //exportamos la variable "router" para definirla en la app principal y usar este modulo
