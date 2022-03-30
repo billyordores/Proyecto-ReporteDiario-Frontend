@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import '../css/Inventario.css'
+import '../css/Inventory.css'
 import CategoryInventory from '../components/CategoryInventory'
 
 const Inventory = () =>{

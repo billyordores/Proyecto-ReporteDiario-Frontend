@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import '../css/Inventario.css'
+import '../css/Inventory.css'
 
 const ItemsInventory =(  props  )=>{
      

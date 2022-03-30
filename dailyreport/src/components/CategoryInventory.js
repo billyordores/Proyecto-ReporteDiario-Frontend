@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import '../css/Inventario.css'
+import '../css/Inventory.css'
 import '../components/ItemsInventory'
 import ItemsInventory from '../components/ItemsInventory'
 
