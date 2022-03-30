@@ -6,9 +6,9 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     port     : '3306',
-    user     : 'dr_root',
-    password : 'Uneatlantico22',
-    database : 'db_daily_report'
+    user     : 'madelinetrejos',
+    password : 'SCscV8t8',
+    database : 'db_dailyreport'
 });
  
 connection.connect(function(err) {
@@ -62,6 +62,22 @@ router.get("/aulas", (request, response)=>{
   
 })
 
+router.get("/informe", (request, response)=>{
+  const {nombre} = request.query
+  
+  connection.query(`SELECT * FROM tb_aula_inventario tbai, tb_revision tbr, tb_inventario tbi, tb_aulas tba 
+  WHERE tbr.id_aula_inventario = tbai.id_aula_inventario
+  AND tbai.id_aula = tba.id_aula
+  AND tbai.id_objeto = tbi.id_objeto
+  AND tbr.fecha_creo LIKE '%2022-03-29%'
+  ${ nombre ? 'AND tba.nombre = ?': ''}`,[nombre], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  });
+  
+})
+
 router.put("/aulas", (request, response)=>{
   
   connection.query(`INSERT INTO tb_aulas (nombre) VALUES ('0.4')`, function (error, results, fields) {
@@ -75,6 +91,18 @@ router.put("/aulas", (request, response)=>{
 router.put("/inventario", (request, response)=>{
   
   connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ('HDMI')`, function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  });
+  
+}) 
+
+router.put("/revision", (request, response)=>{
+  
+  connection.query(`INSERT INTO tb_revision
+  (id_aula_inventario, faltante,defectuoso,correcto, fecha_creo) VALUES
+  (1, true,false,false, NOW())`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
