@@ -3,25 +3,25 @@ import '../css/BtnFlats.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CategoryFlat from './CategoryFlat';
 import { GetAulas } from '../helpers/GetAulas';
+import FilteredClassroom from './FilteredClassroom';
 
 
 const BtnPlants = () =>{
 
-    const [state, setState] = useState({
-        data: [],
-        loading:true
-    });
+    // const [state, setState] = useState({
+    //     data: [],
+    //     loading:true
+    // });
 
-    const {data, loading} = state
-
-    useEffect(()=>{
-        GetAulas().then(response =>{
-            setState({
-                data:response,
-                loading: false
-            })
-        })
-    },[])
+    // const {data, loading} = state
+    // useEffect(()=>{
+    //     GetAulas().then(response =>{
+    //         setState({
+    //             data: response,
+    //             loading: false
+    //         })
+    //     })
+    // },[])
 
 
         return(
@@ -34,6 +34,7 @@ const BtnPlants = () =>{
                                 <div className='TextPor_revisar'>
                                     <a>POR REVISAR</a>
                                 </div>
+                                <FilteredClassroom planta={"1"}/>
                             </div>
                                 <div className='Check'>
                                     <div className='TextRevisadas'>
@@ -50,25 +51,12 @@ const BtnPlants = () =>{
                                 <div className='TextPor_revisar'>
                                     <a>POR REVISAR</a>
                                 </div>
-                                {data.map((element)=>{
-                                    return(
-                                        <div key={element.id_aula}>
-                                            <h4>{element.nombre}</h4>
-                                        </div>
-                                    )
-                                })}
+                                <FilteredClassroom planta={"0"}/>
                             </div>
                                 <div className='Check'>
                                     <div className='TextRevisadas'>
                                         <a>REVISADAS</a>
                                     </div>
-                                    {data.map((value, index)=>{
-                                        return(
-                                            <div key={value.id_aula}>
-                                                <h4>{value.nombre}</h4>
-                                            </div>
-                                        )
-                                    })}
                                 </div>
                         </div>
                     ]} />
@@ -80,6 +68,7 @@ const BtnPlants = () =>{
                                 <div className='TextPor_revisar'>
                                     <a>POR REVISAR</a>
                                 </div>
+                                <FilteredClassroom planta={"-1"}/>
                             </div>
                                 <div className='Check'>
                                     <div className='TextRevisadas'>
@@ -96,6 +85,7 @@ const BtnPlants = () =>{
                                 <div className='TextPor_revisar'>
                                     <a>POR REVISAR</a>
                                 </div>
+                                <FilteredClassroom planta={"-2"}/>
                             </div>
                                 <div className='Check'>
                                     <div className='TextRevisadas'>

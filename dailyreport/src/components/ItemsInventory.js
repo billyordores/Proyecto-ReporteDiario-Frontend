@@ -7,7 +7,7 @@ const ItemsInventory =(  props  )=>{
   return(
      <div className='itemsInventory'>
          <li>
-          <a href='#'>{props.name}</a>
+          <a href='1'>{props.name}</a>
          </li>
      </div>
   );
