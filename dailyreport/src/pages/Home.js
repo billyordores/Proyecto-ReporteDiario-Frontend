@@ -5,7 +5,6 @@ import '../css/Home.css'
 /**ESTE ES EL ENCABEZDO DE LA PAGINA */
 
 const Home = () => {
-
     return(
         <>
             <div>

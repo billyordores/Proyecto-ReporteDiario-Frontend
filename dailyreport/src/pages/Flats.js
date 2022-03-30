@@ -1,15 +1,14 @@
 import React from 'react'
-import BtnPlants from '../components/BtnPlants.js'
+import BtnFlats from '../components/BtnFlats.js'
 import Navbar from '../components/Navbar'
-import '../css/Plantas.css'
 
-const Plantas = () =>{
+const Flats = () =>{
         return(
             <div>
                 <Navbar/>
-                <BtnPlants/>
+                <BtnFlats/>
             </div>
         )
 }
 
-export default Plantas;
+export default Flats;

@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import '../css/Inventario.css'
+import '../css/Inventory.css'
 
-const Inventario = () =>{
+const Inventory = () =>{
         return(
             <div>
                 <Navbar/>
@@ -13,4 +13,4 @@ const Inventario = () =>{
         )
 }
 
-export default Inventario;
+export default Inventory;

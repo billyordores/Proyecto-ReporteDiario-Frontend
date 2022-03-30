@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/Navbar.css'
 import { Link } from 'react-router-dom';
 
 /**ESTE ES EL ENCABEZDO DE LA PAGINA */
 
-class Navbar extends Component{
-    render(){
+const Navbar = () =>{
         return(
             <div>
                 <div className="Header">
@@ -14,13 +13,12 @@ class Navbar extends Component{
                 </div>
 
                 <div className='routesPage'>
-                    <a><Link to='/home'>Home</Link></a>
+                    <Link to='/home'>Home</Link>
                     <Link to='/plantas'>Plantas</Link>
                     <Link to='/inventario'>Inventario</Link>     
                 </div>
             </div>
         )
-    }
 }
 
 export default Navbar;

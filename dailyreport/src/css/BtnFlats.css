@@ -35,7 +35,7 @@
     margin-top: 10px;
 }
 
-.Por_revisar{
+.TextPor_revisar{
     height: auto;
     width: auto;
     border: black solid 0.1vw;
@@ -43,7 +43,7 @@
 }
 
 .To_check{
-    height: 26.1vw; /*Alto (Luego pasar a auto)*/
+    height: auto; /*Alto (Luego pasar a auto)*/
     width: 18.3vw; /*Ancho*/
     /*background: white; /*Eliminar luego*/
     border: black solid 0.1vw;
@@ -52,7 +52,7 @@
     color: black;
 }
 
-.Revisadas{
+.TextRevisadas{
     height: auto;
     width: auto;
     border: black solid 0.1vw;
@@ -60,7 +60,7 @@
 }
 
 .Check{
-    height: 26.1vw; /*Alto (Luego pasar a auto)*/
+    height: auto; /*Alto (Luego pasar a auto)*/
     width: 18.3vw;
     /*background: white;*/
     border: black solid 0.1vw;
@@ -76,3 +76,11 @@
     display: flex;
     transform: translateX(30vw);
 }
+
+/*
+border-top: yellow solid 0.1vw;  /*Arriba
+border-left: green solid 0.1vw; /*Izquierda
+border-right: red solid 0.1vw; /*Derecha
+border-bottom: blue solid 0.1vw; /*Abajo
+26.1vw
+*/
