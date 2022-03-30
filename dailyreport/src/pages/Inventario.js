@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import '../css/Inventario.css'
 import CategoryInventory from '../components/CategoryInventory'
 
-const Inventory = () =>{
+const Inventario = () =>{
         return(
             <div>
                 <Navbar/>
@@ -19,4 +19,4 @@ const Inventory = () =>{
         )
 }
 
-export default Inventory;
+export default Inventario;
