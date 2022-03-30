@@ -43,18 +43,20 @@ router.get("/enviar", (request, response)=>{
 
 
 router.get("/aulas", (request, response)=>{
-  
-       connection.query(`SELECT * FROM tb_aulas`, function (error, results, fields) {
-         if (error) throw error;
-         // console.log('The solution is: ', results[0].solution);
-         response.send(results)
-       });
+  const {id_aula} = request.query
+  connection.query(`SELECT * FROM tb_aulas
+  ${ id_aula ? 'wHERE id_aula= ?': ''}`,[id_aula], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  });
        
- })
- 
- router.get("/inventario", (request, response)=>{
-  
-  connection.query(`SELECT * FROM tb_inventario`, function (error, results, fields) {
+})
+
+router.get("/inventario", (request, response)=>{
+  const {id_objeto} = request.query
+  connection.query(`SELECT * FROM tb_inventario 
+  ${ id_objeto ? 'wHERE id_objeto= ?': ''}`,[id_objeto], function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -80,7 +82,7 @@ router.get("/informe", (request, response)=>{
 
 router.put("/aulas", (request, response)=>{
   
-  connection.query(`INSERT INTO tb_aulas (nombre) VALUES ('0.4')`, function (error, results, fields) {
+  connection.query(`INSERT INTO tb_aulas (nombre) VALUES ('0.4','0')`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -90,7 +92,7 @@ router.put("/aulas", (request, response)=>{
 
 router.put("/inventario", (request, response)=>{
   
-  connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ('HDMI')`, function (error, results, fields) {
+  connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ('Bocina')`, function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -109,6 +111,16 @@ router.put("/revision", (request, response)=>{
   });
   
 }) 
+
+router.delete("/inventario/:id", (request, response)=>{
+  const {id} = request.params
+  connection.query(`DELETE FROM tb_inventario WHERE id_objeto= ?`,[id], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  });
+  
+})
 
 
 //exportamos la variable "router" para definirla en la app principal y usar este modulo
