@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 const Flats = () =>{
         return(
             <div>
-                <Navbar/>
                 <BtnFlats/>
             </div>
         )

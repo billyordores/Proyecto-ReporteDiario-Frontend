@@ -6,7 +6,6 @@ import CategoryInventory from '../components/CategoryInventory'
 const Inventory = () =>{
         return(
             <div>
-                <Navbar/>
                 <div className='pagesInventory'>
                   <h4>Inventario de Aulas</h4>
                 </div>

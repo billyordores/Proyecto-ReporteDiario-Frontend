@@ -8,7 +8,6 @@ const Home = () => {
     return(
         <>
             <div>
-                <Navbar/>
                 <div className='pageHome'>
                     <p>Hola, este es el Home</p>
                 </div>

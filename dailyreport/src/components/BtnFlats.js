@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import '../css/BtnFlats.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CategoryFlat from './CategoryFlat';
@@ -82,3 +82,38 @@ const BtnPlants = () =>{
 }
 
 export default BtnPlants;
+
+/*
+        {filteredData.map((value,index)=>{
+            return(
+                <div key={value.id}>
+                    <div style={styles}>
+                        {value.title}
+                    </div>
+                </div>
+            )
+        })}
+*/
+
+
+
+/*
+ {Data.map(aulas=>{
+        return(
+            <div key={aulas.id}>
+                <h4>{aulas.nombre}</h4>
+                <p>{aulas.objetos}</p>
+            </div>
+        )
+    })}
+ */
+
+/**
+ {data.map((element)=>{
+                                    return(
+                                        <div key={element.id_aula}>
+                                            <h4>{element.nombre}</h4>
+                                        </div>
+                                    )
+                                })}
+ */
