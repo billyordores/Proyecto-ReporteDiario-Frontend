@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React, { useState } from "react";
 import MenuItemFlat from "./MenuItemFlat";
 import '../css/CategoryFlat.css'
 

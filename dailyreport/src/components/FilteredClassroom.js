@@ -1,6 +1,7 @@
 import React from "react"
 import { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
+import '../css/FilteredClassroom.css'
 const FilteredClassroom = ({planta}) =>{
     const [state, setState] = useState({
         data: [],
@@ -17,7 +18,9 @@ const FilteredClassroom = ({planta}) =>{
     
     return (<>
         {state.data.map((element)=>{
-            return <div key={element.id_aula}>{element.nombre}</div>
+            return <div key={element.id_aula}>
+                    <h4 className="Classroom">{element.nombre}</h4>
+                    </div>
         })}        
     </>)
 }

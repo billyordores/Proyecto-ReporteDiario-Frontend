@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Navbar from './Navbar'
+import React from 'react'
 import '../css/Inventory.css'
 
 const ItemsInventory =(  props  )=>{
