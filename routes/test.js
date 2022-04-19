@@ -27,20 +27,16 @@ router.get("/enviar", (request, response)=>{
  const {nombre} = request.query
   console.log(request.headers);
   console.log(request.query);
-
+  connection.query(`SELECT tbai.*, tba.*,  tbi.* FROM tb_aula_inventario tbai, tb_aulas tba, tb_inventario tbi
+  WHERE tbai.id_aula = tba.id_aula
+  AND tbai.id_objeto = tbi.id_objeto
+  ${ nombre ? 'AND tba.nombre = ?': ''}`,[nombre], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+    });   
   
-
-      connection.query(`SELECT tbai.*, tba.*,  tbi.* FROM tb_aula_inventario tbai, tb_aulas tba, tb_inventario tbi
-      WHERE tbai.id_aula = tba.id_aula
-      AND tbai.id_objeto = tbi.id_objeto
-      ${ nombre ? 'AND tba.nombre = ?': ''}`,[nombre], function (error, results, fields) {
-        if (error) throw error;
-        // console.log('The solution is: ', results[0].solution);
-        response.send(results)
-      });
-      
-})
-
+  })
 
 router.get("/aulas", (request, response)=>{
   const {id_aula} = request.query
@@ -118,8 +114,7 @@ router.delete("/inventario/:id", (request, response)=>{
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
-  });
-  
+  }); 
 })
 
 
