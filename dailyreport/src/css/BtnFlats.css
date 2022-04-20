@@ -1,15 +1,15 @@
-.Conten{
+.Content{
     height: auto;
     width: auto;
     /*background: pink;*/
 }
 
-.Buttons li{
+.Floors li{
     list-style-type: none;
 }
 
 /*Los botones de la lista desplegable*/
-.Buttons h3{
+.Floors h3{
     height: 2.2vw;
     color: black;
     font-size: 1.2vw;
@@ -18,11 +18,11 @@
     margin: 0px;
     background: #CCCBC8;
     text-align: center;
-    margin: 0.6vw 0 0.6vw 0;
+    margin: 1vw 0 0.6vw 0;
 }
 
 /*Dentro de la lista desplegable*/
-.Buttons ul li a{
+.Floors ul li a{
     color: black;
     text-decoration: none;
     display: block;
@@ -30,19 +30,20 @@
 }
 
 /*El map dentro de la lista desplegable*/
-.Buttons h4{
+.Floors h4{
     font-size: 1vw;
     margin-top: 10px;
 }
 
-.TextPor_revisar{
+.classroomTables{
     height: auto;
     width: auto;
-    border: black solid 0.1vw;
-    text-align: center;
+    /* background: black; */
+    display: flex;
+    transform: translateX(30vw);
 }
 
-.To_check{
+.ToCheck{
     height: auto; /*Alto (Luego pasar a auto)*/
     width: 18.3vw; /*Ancho*/
     /*background: white; /*Eliminar luego*/
@@ -52,14 +53,14 @@
     color: black;
 }
 
-.TextRevisadas{
+.TitleToCheck{
     height: auto;
     width: auto;
     border: black solid 0.1vw;
     text-align: center;
 }
 
-.Check{
+.Checked{
     height: auto; /*Alto (Luego pasar a auto)*/
     width: 18.3vw;
     /*background: white;*/
@@ -69,18 +70,9 @@
     color: black;
 }
 
-.Dates{
+.TitleChecked{
     height: auto;
     width: auto;
-    /*background: black;*/
-    display: flex;
-    transform: translateX(30vw);
+    border: black solid 0.1vw;
+    text-align: center;
 }
-
-/*
-border-top: yellow solid 0.1vw;  /*Arriba
-border-left: green solid 0.1vw; /*Izquierda
-border-right: red solid 0.1vw; /*Derecha
-border-bottom: blue solid 0.1vw; /*Abajo
-26.1vw
-*/

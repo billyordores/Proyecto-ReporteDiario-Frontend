@@ -1,4 +1,4 @@
-.BtnClassroom h3{
+.ClassroomButton h3{
     width: auto;
     height: auto; /*Alto*/
     background: white;
@@ -7,41 +7,15 @@
     text-align: center;
 }
 
+.ClassroomButton a{
+    text-align: left;
+}
+
 label{
     text-align: left;
     font-size: 1vw;
 }
 
-.BtnClassroom a{
-    text-align: left;
-}
-
 .checkbox{
     margin-right: 5px;
 }
-
-/*
-.BtnClassroom h3{
-    width: auto;
-    height: auto; /*Alto
-    background: white;
-    font-size: 1vw;
-    border: red solid 0.1vw;
-}
-
-.CheckboxObjetos{
-    width: auto;
-    height: auto; /*Alto
-    font-size: 1vw;
-    text-align: left;
-    /*border: black solid 0.1vw;
-    background: pink;
-    transform: translateX(-20%);
-}
-
-.BtnClassroom ul{
-    background: blue;
-    text-align: left;
-    
-}
-*/

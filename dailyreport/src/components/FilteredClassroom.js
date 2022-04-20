@@ -5,6 +5,7 @@ import CategoryFlat from "./CategoryFlat"
 import '../css/FilteredClassroom.css'
 
 const FilteredClassroom = ({planta}) =>{
+
     const [state, setState] = useState({
         data: [],
         loading:true
@@ -18,51 +19,23 @@ const FilteredClassroom = ({planta}) =>{
         })
     },[])
     
-    return (<>
+    
+    
+    return (
+        <>
         {state.data.map((element)=>{
-            return(
-                <div className="BtnClassroom" key={element.id_aula}>
+        
+        return(
+            <div className="ClassroomButton" key={element.id_aula}>
                     <CategoryFlat name={element.nombre} items={[
                         <>
-                            <input type='checkbox' className="checkbox" />
+                            <input type='checkbox' value={element.tipo_objeto} className="checkbox"  /*name={element.tipo_objeto} id={element.id_aula} class='valores'*/ />
                             <label>{element.tipo_objeto}</label>
                         </>
-                        //<p className="hola">{element.tipo_objeto}</p>
                     ]}/>
                 </div>
             )
         })}       
     </>)
 }
-export default FilteredClassroom
-
-/*
-<div className="BtnClassroom" key={element.id_aula}>
-    <CategoryFlat name={element.nombre} items={[
-        <form>
-            <div className="CheckboxObjetos">
-                <label for='objetos'>{element.tipo_objeto}</label>
-                <input type='checkbox' value={element.id_aula_inventario} name={element.id_aula_inventario} id={element.id_aula_inventario}/>
-            </div>
-        </form>
-                        ]}/>
-</div>
-*/
-
-/*
-<form>
-    <p>
-        <label for='objetos' >{element.nombre}</label>
-        <input type='checkbox' value='objetos' name='objetos' />
-    </p>
-</form>
-*/
-
-/*
-<div className="BtnClassroom" key={element.id_aula}>
-    <CategoryFlat name={element.nombre} items={[
-        <p>{element.tipo_objeto}</p>
-    ]}/>
-</div>
-*/
-
+export default FilteredClassroom;

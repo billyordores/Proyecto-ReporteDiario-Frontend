@@ -1,5 +1,4 @@
 import React  from 'react';
-import Navbar from '../components/Navbar'
 import '../css/Home.css'
 
 /**ESTE ES EL ENCABEZDO DE LA PAGINA */
@@ -7,14 +6,17 @@ import '../css/Home.css'
 const Home = () => {
     return(
         <>
-            <div>
-                <div className='pageHome'>
-                    <p>Hola, este es el Home</p>
-                </div>
-                
+            <div className='pageHome'>
+                <p>Hola, este es el Home</p>
             </div>
         </>
         )
 }
 
 export default Home;
+
+/*
+<div className='pageHome'>
+                    <p>Hola, este es el Home</p>
+                </div>
+*/
