@@ -19,3 +19,18 @@ label{
 .checkbox{
     margin-right: 5px;
 }
+
+@media (max-width: 991px){
+    .ClassroomButton h3{
+        font-size: 4vw;
+    }
+
+    label{
+        font-size: 3.5vw;
+    }
+
+    .checkbox{
+        margin: 5px 5px 5px 0;
+    }
+
+}

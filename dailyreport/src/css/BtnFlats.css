@@ -76,3 +76,48 @@
     border: black solid 0.1vw;
     text-align: center;
 }
+
+/*MOVIL*/
+@media (max-width: 991px){
+    .Floors h3{
+        font-size: 4vw;
+        height: 5vw;
+        line-height: 9.1vw;
+    }
+
+    .Floors li{
+        padding: 5px 0 5px 0;
+    }
+
+    .Floors ul li a{
+        font-size: 0.80rem;
+    }
+
+    .classroomTables{
+        transform: translateX(0vw);
+    }
+
+    .ToCheck{
+        width: 40.3vw;
+    }
+
+    .Checked{
+        width: 40.3vw;
+    }
+
+    label{
+        transform: translateY(-4px);
+    }
+}
+
+/*TABLET*/
+@media (max-width: 1080px){
+    .Floors h3{
+        height: 5vw;
+        line-height: 5.1vw;
+    }
+
+    label{
+        transform: translateY(-3px);
+    }
+}

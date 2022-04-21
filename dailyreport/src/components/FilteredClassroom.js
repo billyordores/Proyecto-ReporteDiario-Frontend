@@ -35,7 +35,7 @@ const FilteredClassroom = ({planta}) =>{
                     ]}/>
                 </div>
             )
-        })}       
+        })}
     </>)
 }
 export default FilteredClassroom;
