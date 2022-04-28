@@ -13,7 +13,6 @@ const CategoryInventory =(  props  )=>{
              {props.items.map((item, index)=>{
                return(
                <ItemsInventory name={item} key={index}/>) 
-               
              })}
            </ul> 
          </li>

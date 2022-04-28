@@ -1,15 +1,15 @@
 import React from "react"
 import { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
-import CategoryFlat from "./CategoryFlat"
-import '../css/FilteredClassroom.css'
+
 
 const FilteredClassroom = ({planta}) =>{
-
     const [state, setState] = useState({
+        abierto: false,
         data: [],
         loading:true
     });
+    
     useEffect(()=>{
         GetAulas().then(response =>{
             setState({
@@ -19,23 +19,24 @@ const FilteredClassroom = ({planta}) =>{
         })
     },[])
     
-    
-    
     return (
         <>
-        {state.data.map((element)=>{
-        
-        return(
-            <div className="ClassroomButton" key={element.id_aula}>
-                    <CategoryFlat name={element.nombre} items={[
-                        <>
-                            <input type='checkbox' value={element.tipo_objeto} className="checkbox"  /*name={element.tipo_objeto} id={element.id_aula} class='valores'*/ />
-                            <label>{element.tipo_objeto}</label>
-                        </>
-                    ]}/>
-                </div>
-            )
-        })}
-    </>)
+            {state.data.map((element)=>{
+                return(
+                    <>
+                    <h2>{element.nombre}</h2>
+                    <label>{element.tipo_objeto}</label>
+                    </>
+                    )
+            })}
+        </>
+    )
 }
+
 export default FilteredClassroom;
+
+/*
+FILTRAR INVENTARIO
+
+<label>{element.tipo_objeto}</label>
+*/

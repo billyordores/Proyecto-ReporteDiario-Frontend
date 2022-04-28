@@ -91,6 +91,13 @@ const Navbar = () =>{
             </li>
 
             <li className="nav-item active">
+              <NavLink className="nav-link" to="/modal_prueba" exact>
+              <i className="fa fa-window-maximize">
+              </i>Modal Prueba
+              </NavLink>
+            </li>
+            
+            <li className="nav-item active">
               <NavLink className="nav-link" to="/inventario" exact>
               <i className="fa fa-database">
               </i>Inventario

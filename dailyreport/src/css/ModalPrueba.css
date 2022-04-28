@@ -1,0 +1,37 @@
+.ContenedorBotones{
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Boton{
+    display: block;
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: black;
+    border: none;
+    background: #999;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s ease all;
+}
+.Boton:hover{
+    background: #4f535a;
+}
+
+.Contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.Contenido h1{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.Contenido p{
+    margin-bottom: 20px;
+}
