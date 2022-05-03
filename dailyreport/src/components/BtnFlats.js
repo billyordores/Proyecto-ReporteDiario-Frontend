@@ -21,12 +21,12 @@ const BtnPlants = () => {
 
         <Accordion.Item eventKey="3">
           <Accordion.Header>Planta -1</Accordion.Header>
-          <Accordion.Body><FilteredClassroom planta={'1'} /></Accordion.Body>
+          <Accordion.Body><FilteredClassroom planta={'-1'} /></Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="4">
           <Accordion.Header>Planta -2</Accordion.Header>
-          <Accordion.Body><FilteredClassroom planta={'0'} /></Accordion.Body>
+          <Accordion.Body><FilteredClassroom planta={'-2'} /></Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </div>

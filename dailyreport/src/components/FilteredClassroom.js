@@ -2,15 +2,22 @@ import React from "react"
 import { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
 import VentanaModal from './VentanaModal'
+import ModalComponent from "./modal"
 
 const FilteredClassroom = ({planta}) =>{
 
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
-
+    const [dataModal, setDataModal] = useState({})
     const [state, setState] = useState({
         data: [],
         loading:true
     });
+
+    const toggle = ({ element }) => {
+        cambiarEstadoModal1(!estadoModal1)
+        setDataModal(element)
+    }
+    
     
     useEffect(()=>{
         GetAulas().then(response =>{
@@ -23,23 +30,16 @@ const FilteredClassroom = ({planta}) =>{
     
     return (
         <>
+            <ModalComponent cambiarEstadoModal1={cambiarEstadoModal1} estadoModal1={estadoModal1} dataModal={dataModal} />
+        
             {state.data.map((element)=>{
                 return(
                     <div>
                         <div className='ContenedorBotones'>
-                            <button className="Boton" onClick={() => cambiarEstadoModal1(!estadoModal1)} >{element.nombre}</button> {/*Modal 1 */}
+                            <button className="Boton" onClick={() => toggle({element})} >{element.nombre}</button> {/*Modal 1 */}
                         </div>
 
-                        <VentanaModal
-                            estado = {estadoModal1}
-                            cambiarEstado={cambiarEstadoModal1}
-                            titulo={element.nombre}
-                        >
-                        <div className="Contenido">
-                            <h3>{element.tipo_objeto}</h3>
-                            <button className="Boton">Guardar Cambios</button>
-                        </div>
-                        </VentanaModal>
+                        
                     </div>
                 )
             })}
