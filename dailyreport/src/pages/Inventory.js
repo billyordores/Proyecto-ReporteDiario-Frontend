@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import '../css/Inventory.css'
 import CategoryInventory from '../components/CategoryInventory'
 

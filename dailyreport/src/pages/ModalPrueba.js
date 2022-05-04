@@ -11,6 +11,14 @@ const ModalPrueba = () =>{
             <div className='ContenedorBotones'>
                 <button className="Boton" onClick={() => cambiarEstadoModal1(!estadoModal1)} >Modal 1</button> {/*Modal 1 */}
                 <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
+                <button className="Boton" onClick={() => cambiarEstadoModal2(!estadoModal2)} >Modal 2</button> {/*Modal 2 */}
             </div>
 
             {/*MODAL  1*/}

@@ -1,8 +1,7 @@
-import React from "react"
-import { useEffect , useState } from "react"
+import React, { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
-import VentanaModal from './VentanaModal'
 import ModalComponent from "./modal"
+import '../css/FiltClassroom.css'
 
 const FilteredClassroom = ({planta}) =>{
 
@@ -34,13 +33,9 @@ const FilteredClassroom = ({planta}) =>{
         
             {state.data.map((element)=>{
                 return(
-                    <div>
-                        <div className='ContenedorBotones'>
+                        <div className='ContButton'>
                             <button className="Boton" onClick={() => toggle({element})} >{element.nombre}</button> {/*Modal 1 */}
                         </div>
-
-                        
-                    </div>
                 )
             })}
         </>
@@ -48,10 +43,3 @@ const FilteredClassroom = ({planta}) =>{
 }
 
 export default FilteredClassroom;
-
-/*
-AQUI VAN LOS BOTONES DEL NAVBAR :)
-
-<label>{element.tipo_objeto}</label>
-// <h2>{element.nombre}</h2>
-<label>{element.tipo_objeto}</label> */

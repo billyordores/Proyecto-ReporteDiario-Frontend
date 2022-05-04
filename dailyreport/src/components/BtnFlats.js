@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/BtnFlats.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilteredClassroom from "./FilteredClassroom";
 import { Accordion } from "react-bootstrap";
-import ModalPrueba from "../pages/ModalPrueba";
 
 const BtnPlants = () => {
   return (
@@ -34,6 +33,3 @@ const BtnPlants = () => {
 };
 
 export default BtnPlants;
-
-/* <FilteredClassroom planta={'1'} />
-<FilteredClassroom planta={'0'} /> */

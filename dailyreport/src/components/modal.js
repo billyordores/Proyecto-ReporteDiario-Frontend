@@ -1,7 +1,6 @@
 import React from "react"
-import { useEffect , useState } from "react"
-import { GetAulas } from "../helpers/GetAulas"
 import VentanaModal from './VentanaModal'
+import '../css/FiltClassroom.css'
 
 const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
 
@@ -13,7 +12,7 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
             <VentanaModal
                 estado = {estadoModal1}
                 cambiarEstado={cambiarEstadoModal1}
-                titulo= {nombre}
+                titulo= { 'Aula ' + nombre}
             >
                 <div className="Contenido">
                     <h3>{tipo_objeto}</h3>
@@ -25,10 +24,3 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
 }
 
 export default ModalComponent;
-
-/*
-AQUI VAN LOS BOTONES DEL NAVBAR :)
-
-<label>{element.tipo_objeto}</label>
-// <h2>{element.nombre}</h2>
-<label>{element.tipo_objeto}</label> */
