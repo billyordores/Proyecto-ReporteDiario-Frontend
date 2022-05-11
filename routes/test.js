@@ -6,9 +6,9 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     port     : '3306',
-    user     : 'madelinetrejos',
-    password : 'SCscV8t8',
-    database : 'db_dailyreport'
+    user     : 'dr_root',
+    password : 'Uneatlantico22',
+    database : 'db_daily_report'
 });
  
 connection.connect(function(err) {
@@ -49,17 +49,6 @@ router.get("/aulas", (request, response)=>{
        
 })
 
-router.get("/inventario", (request, response)=>{
-  const {id_objeto} = request.query
-  connection.query(`SELECT * FROM tb_inventario 
-  ${ id_objeto ? 'wHERE id_objeto= ?': ''}`,[id_objeto], function (error, results, fields) {
-    if (error) throw error;
-    // console.log('The solution is: ', results[0].solution);
-    response.send(results)
-  });
-  
-})
-
 router.get("/informe", (request, response)=>{
   const {nombre} = request.query
   
@@ -88,13 +77,29 @@ router.put("/aulas", (request, response)=>{
 
 router.put("/inventario", (request, response)=>{
   
-  connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ('Bocina')`, function (error, results, fields) {
+  connection.query(`UPDATE tb_inventario SET tipo_objeto= ? WHERE id_objeto = ?`,[request.body.tipo_objeto, request.body.id_objeto ], function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
   });
   
-}) 
+})
+router.delete("/inventario/:id_objeto", (request, response)=>{  
+  connection.query(`DELETE FROM tb_inventario WHERE id_objeto = ?`,[request.params.id_objeto], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  }); 
+})
+router.post("/inventario", (request, response)=>{  
+  connection.query(`INSERT INTO tb_inventario (tipo_objeto) VALUES ( ? )`,[request.body.tipo_objeto], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  }); 
+})
+
+
 
 router.put("/revision", (request, response)=>{
   
@@ -108,14 +113,6 @@ router.put("/revision", (request, response)=>{
   
 }) 
 
-router.delete("/inventario/:id", (request, response)=>{
-  const {id} = request.params
-  connection.query(`DELETE FROM tb_inventario WHERE id_objeto= ?`,[id], function (error, results, fields) {
-    if (error) throw error;
-    // console.log('The solution is: ', results[0].solution);
-    response.send(results)
-  }); 
-})
 
 
 //exportamos la variable "router" para definirla en la app principal y usar este modulo
