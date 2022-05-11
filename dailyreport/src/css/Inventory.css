@@ -1,7 +1,7 @@
 .pagesInventory{
     height: 5vw;
     width: auto;
-    background: rgb(102, 255, 0);
+    background: rgb(208, 216, 223);
     text-align: center;
     list-style: none;
 
@@ -47,4 +47,9 @@
                          "footer   footer   footer   footer"
                          "row  row  row  row"; */
                          
+}
+.Inventory-MaterialTable{
+    width: 100%;
+    align-items: center;
+    padding: 25px 60px 25px 60px;
 }
