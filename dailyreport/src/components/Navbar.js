@@ -45,10 +45,11 @@ const Navbar = () =>{
 
   return(
     <nav className="navbar navbar-expand-lg navbar-mainbg">
-
+      
       <NavLink className="navbar-brand navbar-logo" to='/' exact> 
       Plataforma de Gestión para Mantenimiento Aulas
       </NavLink>
+
 
       <button
         className="navbar-toggler"
@@ -90,12 +91,12 @@ const Navbar = () =>{
               </NavLink>
             </li>
 
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <NavLink className="nav-link" to="/modal_prueba" exact>
               <i className="fa fa-window-maximize">
               </i>Modal Prueba
               </NavLink>
-            </li>
+            </li> */}
             
             <li className="nav-item active">
               <NavLink className="nav-link" to="/inventario" exact>
@@ -112,20 +113,3 @@ const Navbar = () =>{
 }
 
 export default Navbar;
-
-/*
-
-<NavLink className="navbar-brand navbar-logo" to='/home' exact> 
-
-<div className='Logo'>
-                            <img className='img' src={process.env.PUBLIC_URL + 'Logo_EIA.png'}/>
-                        </div>
-
-                        <div className='Title'>
-                            <h1>Plataforma de Gestión para Mantenimiento Aulas</h1>
-                        </div>
-
-<Link to='/home'>Home</Link>
-<Link to='/plantas'>Plantas</Link>
-<Link to='/inventario'>Inventario</Link>
-*/

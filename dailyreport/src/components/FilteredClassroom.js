@@ -1,14 +1,26 @@
-import React from "react"
-import { useEffect , useState } from "react"
+import React, { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
-
+import ModalComponent from "./modal"
+import '../css/FiltClassroom.css'
 
 const FilteredClassroom = ({planta}) =>{
+
+    const [estadoModal1, cambiarEstadoModal1] = useState(false);
+    const [dataModal, setDataModal] = useState({})
+    
+    
     const [state, setState] = useState({
-        abierto: false,
         data: [],
         loading:true
     });
+
+
+    
+    const toggle = ({ element }) => {
+        cambiarEstadoModal1(!estadoModal1)
+        setDataModal(element)
+    }
+    
     
     useEffect(()=>{
         GetAulas().then(response =>{
@@ -21,22 +33,17 @@ const FilteredClassroom = ({planta}) =>{
     
     return (
         <>
+            <ModalComponent cambiarEstadoModal1={cambiarEstadoModal1} estadoModal1={estadoModal1} dataModal={dataModal} />
+        
             {state.data.map((element)=>{
                 return(
-                    <>
-                    <h2>{element.nombre}</h2>
-                    <label>{element.tipo_objeto}</label>
-                    </>
-                    )
+                        <div className='ContButton'>
+                            <button className="Boton" onClick={() => toggle({element})} >{element.nombre}</button> {/*Modal 1 */}
+                        </div>
+                )
             })}
         </>
     )
 }
 
 export default FilteredClassroom;
-
-/*
-FILTRAR INVENTARIO
-
-<label>{element.tipo_objeto}</label>
-*/
