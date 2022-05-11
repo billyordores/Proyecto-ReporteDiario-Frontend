@@ -9,6 +9,9 @@ const Inventory = () =>{
                 <div className='pagesInventory'>
                   <h4>Inventario de Aulas</h4>
                 </div>
+                <div class="addAulas">
+                    <button class="buttonAddAulas" type="submit"> +Aulas </button>
+                </div>              
                 <TableInventory/>
             </div>
         )

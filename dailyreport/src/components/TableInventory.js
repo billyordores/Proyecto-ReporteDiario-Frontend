@@ -3,6 +3,8 @@ import MaterialTable from '@material-table/core'
 import tableIcons from "./MaterialTableIcons";
 import { GetObjectInvetory } from "../helpers/GetObjectInventory";
 import PutObjectInventory from "../helpers/PutObjectInventory";
+import DeleteObjectInventory from "../helpers/DeleteObjectInventory";
+import PostObjectInventory from "../helpers/PostObjectInventory";
 
 const TableInventory = () =>{
     const [data, setData] = useState([]);
@@ -13,7 +15,8 @@ const TableInventory = () =>{
             type: 'numeric',
             cellStyle: {
                 textAlign: "right"
-            }
+            },
+            editable: 'never'
         },
         {
             title:'Nombre',
@@ -26,19 +29,26 @@ const TableInventory = () =>{
         GetObjectInvetory().then(response =>{
             setObject(response)   
         })
-    }, [setObject])
+    }, [object])
 
     const handleRowUpdate=(newData, oldData, resolve)=>{
-        PutObjectInventory(newData.tipo_objeto).then(response =>{
+        PutObjectInventory(newData.tipo_objeto, newData.id_objeto).then(response =>{
             console.log(response)  
         })
         resolve();
     }
-    const handleRowAdd =()=>{
-        console.log("Esta es la add")
+    const handleRowAdd =(newData, resolve)=>{
+        PostObjectInventory(newData.tipo_objeto).then(response =>{
+            console.log(response)
+        })
+        resolve();
     }
-    const handleRowDelete =()=>{
-        console.log("Esta es la delete")
+    const handleRowDelete =(oldData, resolve)=>{
+        console.log("dataToDelete", oldData)
+        DeleteObjectInventory(oldData.id_objeto).then( response =>{
+            console.log(response)
+        })
+        resolve();
     }
 
     return(
@@ -46,8 +56,7 @@ const TableInventory = () =>{
             <MaterialTable
                 columns={columnas} 
                 data={object} 
-                title= "Inventario de Materiales Uneatlantico" 
-                
+                title= "Inventario de Materiales Uneatlantico"                
                 editable={{
                     onRowUpdate: (newData, oldData) =>
                       new Promise((resolve) => {
@@ -60,15 +69,13 @@ const TableInventory = () =>{
                         handleRowAdd(newData, resolve)
                       }),
                     onRowDelete: (oldData) =>
-                      new Promise((resolve) => {
-                        handleRowDelete(oldData, resolve)
+                      new Promise((resolve) => {                        
+                        handleRowDelete(oldData, resolve)                                                   
                       }),
                 }}
             />        
         </div>
-    )
-        
-    
+    )   
 }
 
 export default TableInventory;
