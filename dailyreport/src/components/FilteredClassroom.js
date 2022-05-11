@@ -7,11 +7,15 @@ const FilteredClassroom = ({planta}) =>{
 
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
     const [dataModal, setDataModal] = useState({})
+    
+    
     const [state, setState] = useState({
         data: [],
         loading:true
     });
 
+
+    
     const toggle = ({ element }) => {
         cambiarEstadoModal1(!estadoModal1)
         setDataModal(element)
