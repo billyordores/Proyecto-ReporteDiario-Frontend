@@ -56,3 +56,25 @@
     align-items: center;
     padding: 25px 60px 25px 60px;
 }
+.buttonAddAulas{
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 30px;
+    border-style: none;    
+    background-color: rgb(206, 200, 200);
+    color: rgb(18, 18, 18);
+    font-size: arial;
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.buttonAddAulas:hover {
+    box-shadow: 0 4px 12px 0 rgba(69, 67, 67, 0.24);
+  }
+
+.addAulas{
+    margin: 15px;
+    
+}
