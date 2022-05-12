@@ -7,7 +7,7 @@ const Inventory = () =>{
         return(
             <div>
                 <div className='pagesInventory'>
-                  <h4>Inventario de Aulas</h4>
+                  <h2>Inventario de Aulas</h2>
                 </div>
                 <TableInventory/>
             </div>

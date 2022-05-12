@@ -1,14 +1,13 @@
 import React  from 'react';
-import '../css/Home.css'
 
-const Home = () => {
+const Chromebooks = () => {
     return(
         <>
             <div className='pageHome'>
-                <p>Hola, este es el Home</p>
+                <p>Pagina para llevar el inventario de las chromebooks</p>
             </div>
         </>
         )
 }
 
-export default Home;
+export default Chromebooks;

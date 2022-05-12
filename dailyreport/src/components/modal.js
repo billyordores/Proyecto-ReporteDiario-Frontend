@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import VentanaModal from './VentanaModal'
 import '../css/FiltClassroom.css'
 import { Field, Formik } from "formik";
+import { Container, Table } from "reactstrap";
 
 const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
 
@@ -31,12 +32,35 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                 >
                     {({ values, handleSubmit }) =>(
                         <form onSubmit={handleSubmit} className='Formulario' >
-                            <div>
-                                <label>
-                                    <Field type='radio' name={tipo_objeto} value='true' /> {tipo_objeto}
-                                </label>
-                            </div>
-                            <button className="Boton" type="submit" >Enviar Inventario Del Aula {nombre}</button>
+
+                            <Container>
+                                <Table>
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Bien</th>
+                                            <th>Mal</th>
+                                            <th>No hay</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{tipo_objeto}</td>
+                                            <td>
+                                            <Field className='field' type='radio' name={tipo_objeto} value='Bien' />
+                                            </td>
+                                            <td>
+                                            <Field className='field' type='radio' name={tipo_objeto} value='Mal' />
+                                            </td>
+                                            <td>
+                                            <Field className='field' type='radio' name={tipo_objeto} value='Nohay' />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
+                            </Container>
+                            <button className="Boton" type="submit" >Enviar</button>
+                            <br></br>
                             {FormEnviado && <p className="exito" >Inventario enviado con éxito!</p>}
                         </form>
                     )}

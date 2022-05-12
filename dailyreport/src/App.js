@@ -1,4 +1,4 @@
-import Home from './pages/Home.js'
+import Chromebooks from './pages/Chromebooks.js'
 import Flats from './pages/Flats.js'
 import Inventory from './pages/Inventory.js'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -12,7 +12,7 @@ function App() {
       <Routes>
 
         
-        <Route path='/home' element={<Home/>} />
+        <Route path='/chromebooks' element={<Chromebooks/>} />
 
         <Route path='/plantas' element={<Flats/>} />
 

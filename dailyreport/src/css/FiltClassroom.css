@@ -41,6 +41,8 @@
     margin-bottom: 20px;
 }
 
+
+
 .Formulario label{
     font-size: 25px;
     padding: 0 0 10px 0;
@@ -51,4 +53,83 @@
 	font-size: 20px;
 	padding-top: 20px;
 	color: #02a802;
+}
+
+.itemsForm{
+  overflow: hidden;
+}
+
+.izquierda{
+    float: left;
+    padding: 10px 70px 10px 10px;
+}
+
+.derecha{
+    float: right;
+    padding: 10px 0 10px 10px;
+}
+
+
+
+
+.well{
+    float: left;
+    padding: 0 60px 0 0;
+}
+
+.evil{
+    float: left;
+    padding: 0 50px 0 0;
+}
+
+.isNot{
+    float: left;
+}
+
+
+
+
+
+.estados{
+    float:left;
+    display: flex;
+    padding-left: 160px;
+}
+
+.estados h4{
+    padding: 0 30px 0 0;
+}
+
+/* .Bien{
+    color: #02a802;
+}
+
+.Mal{
+    
+    color: #f80000;
+}
+
+.NoHay{
+    color: #d3d30f;
+} */
+
+@media (max-width: 991px){
+    .evil{
+        float: left;
+        padding: 0 50px 0 0;
+    }
+
+    .isNot{
+        float: left;
+        padding: 0 0 0 0;
+    }
+
+    .izquierda{
+        padding: 10px 40px 10px 10px;
+    }
+
+    .estados{
+        padding-left: 80px;
+    }
+    
 }

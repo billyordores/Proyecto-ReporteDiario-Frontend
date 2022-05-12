@@ -1,15 +1,18 @@
 .pagesInventory{
-    height: 5vw;
+    /* height: 5vw; */
     width: auto;
-    background: rgb(208, 216, 223);
+    /* background: rgb(208, 216, 223); */
+    background: #999;
     text-align: center;
     list-style: none;
 
 }
 
-.pagesInventory h4{
-    font-size: 2vw;
-    padding-top: 1vw;
+
+
+.pagesInventory h2{
+    /* font-size: 2vw; */
+    padding: 1vw 0 1vw 0; 
     list-style: none;
 
 }

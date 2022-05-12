@@ -78,15 +78,15 @@ const Navbar = () =>{
             </div>
 
             <li className="nav-item active">
-              <NavLink className="nav-link" to="/home" exact>
-              <i className="fa fa-home">
-              </i>Inicio
+              <NavLink className="nav-link" to="/chromebooks" exact>
+              <i className="fa fa-laptop">
+              </i>Chromebooks
               </NavLink>
             </li>
 
             <li className="nav-item active">
               <NavLink className="nav-link" to="/plantas" exact>
-              <i className="fa fa-desktop">
+              <i className="fa fa-building">
               </i>Plantas
               </NavLink>
             </li>
@@ -100,7 +100,7 @@ const Navbar = () =>{
             
             <li className="nav-item active">
               <NavLink className="nav-link" to="/inventario" exact>
-              <i className="fa fa-database">
+              <i className="fa fa-server">
               </i>Inventario
               </NavLink>
             </li>
