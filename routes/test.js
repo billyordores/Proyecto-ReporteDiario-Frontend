@@ -98,8 +98,13 @@ router.post("/inventario", (request, response)=>{
     response.send(results)
   }); 
 })
-
-
+router.get("/inventario", (request, response)=>{  
+  connection.query(`SELECT * FROM tb_inventario`, function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  }); 
+})
 
 router.put("/revision", (request, response)=>{
   
@@ -112,8 +117,6 @@ router.put("/revision", (request, response)=>{
   });
   
 }) 
-
-
 
 //exportamos la variable "router" para definirla en la app principal y usar este modulo
 module.exports = router
