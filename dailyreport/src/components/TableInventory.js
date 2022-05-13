@@ -12,9 +12,12 @@ const TableInventory = () =>{
         {
             title:'Id',
             field : 'id_objeto',
-            type: 'numeric',
+            type: 'numeric',            
+            headerStyle: {
+                padding:" 0px 0px 0px 335px"
+            },
             cellStyle: {
-                textAlign: "right"
+                textAlign: "center"
             },
             editable: 'never'
         },
@@ -54,9 +57,10 @@ const TableInventory = () =>{
     return(
         <div className="Inventory-MaterialTable">            
             <MaterialTable
-                columns={columnas} 
+                columns={columnas}
+                // options={{actionsColumnIndex: 1}}
                 data={object} 
-                title= "Inventario de Materiales Uneatlantico"                
+                title= "Inventario de Materiales Uneatlantico"         
                 editable={{
                     onRowUpdate: (newData, oldData) =>
                       new Promise((resolve) => {
@@ -73,6 +77,9 @@ const TableInventory = () =>{
                         handleRowDelete(oldData, resolve)                                                   
                       }),
                 }}
+                style={
+                    {width:'80%', margin:"0px 0px 0px 200px"}
+                }
             />        
         </div>
     )   
