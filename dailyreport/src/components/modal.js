@@ -3,7 +3,6 @@ import VentanaModal from './VentanaModal'
 import '../css/FiltClassroom.css'
 import { Field, Formik } from "formik";
 import { Container, Table } from "reactstrap";
-import { SettingsOutlined } from "@material-ui/icons";
 
 const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
 
@@ -24,15 +23,15 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                 initialValues={{
                 }}
 
-                validate={(valores) =>{
-                    let errores ={};
+                // validate={(valores) =>{
+                //     let errores ={};
 
-                    if(valores){
-                        errores.valores = 'Por favor selecciona un elemento del inventario'
-                    }
+                //     if(valores){
+                //         errores.valores = 'Por favor selecciona un elemento del inventario'
+                //     }
 
-                    return errores;
-                } }
+                //     return errores;
+                // } }
 
 
                 onSubmit={(valores , {resetForm}) => {
@@ -46,7 +45,6 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                 >
                     {({ values, errors , handleSubmit, handleChange, handleBlur }) =>(
                         <form onSubmit={handleSubmit} className='Formulario' >
-                            {console.log(errors)}
 
                             <Container>
                                 <Table>
@@ -77,8 +75,8 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                             <button className="Boton" type="submit" >Enviar</button>
                             <br></br>
                             {FormEnviado && <p className="exito" >Inventario enviado con éxito!</p>}
-                            <br>    </br>
-                            {errors.valores && <div className="error" >{errors.valores}</div>}
+                            {/* <br>    </br>
+                            {errors.valores && <div className="error" >{errors.valores}</div>} */}
                         </form>
                     )}
                 </Formik>
