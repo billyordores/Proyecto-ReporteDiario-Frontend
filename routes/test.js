@@ -73,7 +73,9 @@ router.put("/aulas", (request, response)=>{
     response.send(results)
   });
   
-}) 
+})
+
+//CRUD Inventario
 
 router.put("/inventario", (request, response)=>{
   
@@ -117,6 +119,14 @@ router.put("/revision", (request, response)=>{
   });
   
 }) 
+//CD InventarioAulas
+router.post("/inventarioAulas", (request, response)=>{  
+  connection.query(`INSERT INTO tb_aula_inventario (id_aula,id_objeto) VALUES ( ? , ? )`,[request.body.id_aula, request.body.id_objeto], function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  }); 
+})
 
 //exportamos la variable "router" para definirla en la app principal y usar este modulo
 module.exports = router
