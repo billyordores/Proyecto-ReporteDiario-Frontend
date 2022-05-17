@@ -27,10 +27,13 @@ router.get("/enviar", (request, response)=>{
  const {nombre} = request.query
   console.log(request.headers);
   console.log(request.query);
-  connection.query(`SELECT tbai.*, tba.*,  tbi.* FROM tb_aula_inventario tbai, tb_aulas tba, tb_inventario tbi
-  WHERE tbai.id_aula = tba.id_aula
-  AND tbai.id_objeto = tbi.id_objeto
-  ${ nombre ? 'AND tba.nombre = ?': ''}`,[nombre], function (error, results, fields) {
+  const queryGetAulas = `SELECT * FROM db_daily_report.tb_aulas`
+
+    // `SELECT tbai.*, tba.*,  tbi.* FROM tb_aula_inventario tbai, tb_aulas tba, tb_inventario tbi
+    // WHERE tbai.id_aula = tba.id_aula
+    // AND tbai.id_objeto = tbi.id_objeto
+    // ${ nombre ? 'AND tba.nombre = ?': ''}`
+  connection.query(queryGetAulas,[], function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
@@ -102,6 +105,13 @@ router.post("/inventario", (request, response)=>{
 })
 router.get("/inventario", (request, response)=>{  
   connection.query(`SELECT * FROM tb_inventario`, function (error, results, fields) {
+    if (error) throw error;
+    // console.log('The solution is: ', results[0].solution);
+    response.send(results)
+  }); 
+})
+router.get("/inventario/:id_aula", (request, response)=>{  
+  connection.query(`SELECT * FROM tb_aula_inventario WHERE tb_aula_inventario.id_aula = ?`,[request.params.id_aula], function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
