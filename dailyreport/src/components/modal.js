@@ -3,6 +3,7 @@ import VentanaModal from './VentanaModal'
 import '../css/FiltClassroom.css'
 import { Field, Formik } from "formik";
 import { Container, Table } from "reactstrap";
+import { SettingsOutlined } from "@material-ui/icons";
 
 const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
 
@@ -22,16 +23,30 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                 <Formik
                 initialValues={{
                 }}
+
+                validate={(valores) =>{
+                    let errores ={};
+
+                    if(valores){
+                        errores.valores = 'Por favor selecciona un elemento del inventario'
+                    }
+
+                    return errores;
+                } }
+
+
                 onSubmit={(valores , {resetForm}) => {
                   resetForm();
                   console.log("Inventario del aula " + nombre + " actualizado");
                   console.log(valores); //Accedo a lo que se ha enviado
+
                   setFormEnviado(true);
                   setTimeout(() => setFormEnviado(false), 4000)
                 }}
                 >
-                    {({ values, handleSubmit }) =>(
+                    {({ values, errors , handleSubmit, handleChange, handleBlur }) =>(
                         <form onSubmit={handleSubmit} className='Formulario' >
+                            {console.log(errors)}
 
                             <Container>
                                 <Table>
@@ -43,17 +58,17 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                                             <th>No hay</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody  >
                                         <tr>
                                             <td>{tipo_objeto}</td>
                                             <td>
-                                            <Field className='field' type='radio' name={tipo_objeto} value='Bien' />
+                                            <Field className='field' type='radio' name={tipo_objeto} value='bien'/>
                                             </td>
                                             <td>
-                                            <Field className='field' type='radio' name={tipo_objeto} value='Mal' />
+                                            <Field className='field' type='radio' name={tipo_objeto} value='Mal'/>
                                             </td>
                                             <td>
-                                            <Field className='field' type='radio' name={tipo_objeto} value='Nohay' />
+                                            <Field className='field' type='radio' name={tipo_objeto} value='NoHay'/>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -62,6 +77,8 @@ const ModalComponent = ({cambiarEstadoModal1, estadoModal1, dataModal}) =>{
                             <button className="Boton" type="submit" >Enviar</button>
                             <br></br>
                             {FormEnviado && <p className="exito" >Inventario enviado con éxito!</p>}
+                            <br>    </br>
+                            {errors.valores && <div className="error" >{errors.valores}</div>}
                         </form>
                     )}
                 </Formik>

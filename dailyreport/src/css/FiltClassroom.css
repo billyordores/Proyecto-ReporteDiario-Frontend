@@ -6,22 +6,6 @@
     gap: 20px;
 }
 
-.Boton{
-    display: block;
-    padding: 10px 30px;
-    border-radius: 100px;
-    color: black;
-    border: none;
-    background: #999;
-    cursor: pointer;
-    font-weight: 500;
-    transition: .3s ease all;
-}
-
-.Boton:hover{
-    background: #4f535a;
-}
-
 .Contenido h3{
     padding: 0 0 10px 0;
 }
@@ -59,77 +43,24 @@
   overflow: hidden;
 }
 
-.izquierda{
-    float: left;
-    padding: 10px 70px 10px 10px;
-}
-
-.derecha{
+.ClasBtn{
+    display: block;
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: black;
+    border: none;
+    background: #999;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s ease all;
     float: right;
-    padding: 10px 0 10px 10px;
 }
 
-
-
-
-.well{
-    float: left;
-    padding: 0 60px 0 0;
+.ClasBtn:hover{
+    background: #4f535a;
 }
 
-.evil{
-    float: left;
-    padding: 0 50px 0 0;
-}
-
-.isNot{
-    float: left;
-}
-
-
-
-
-
-.estados{
-    float:left;
-    display: flex;
-    padding-left: 160px;
-}
-
-.estados h4{
-    padding: 0 30px 0 0;
-}
-
-/* .Bien{
-    color: #02a802;
-}
-
-.Mal{
-    
-    color: #f80000;
-}
-
-.NoHay{
-    color: #d3d30f;
-} */
-
-@media (max-width: 991px){
-    .evil{
-        float: left;
-        padding: 0 50px 0 0;
-    }
-
-    .isNot{
-        float: left;
-        padding: 0 0 0 0;
-    }
-
-    .izquierda{
-        padding: 10px 40px 10px 10px;
-    }
-
-    .estados{
-        padding-left: 80px;
-    }
-    
+.error{
+    color: #ff0000;
+    text-align: center;
 }
