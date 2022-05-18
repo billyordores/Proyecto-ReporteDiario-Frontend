@@ -4,7 +4,7 @@ const testController = require('../controllers/test.controller')
 var mysql      = require('mysql');
 
 var connection = mysql.createConnection({
-    host     : 'localhost',
+    host     : '172.27.17.180',
     port     : '3306',
     user     : 'dr_root',
     password : 'Uneatlantico22',
