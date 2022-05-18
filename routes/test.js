@@ -111,7 +111,10 @@ router.get("/inventario", (request, response)=>{
   }); 
 })
 router.get("/inventario/:id_aula", (request, response)=>{  
-  connection.query(`SELECT * FROM tb_aula_inventario WHERE tb_aula_inventario.id_aula = ?`,[request.params.id_aula], function (error, results, fields) {
+  connection.query(`SELECT * FROM tb_aula_inventario tbai 
+                    INNER JOIN  tb_inventario tbi
+                    ON tbai.id_objeto = tbi.id_objeto
+                    AND tbai.id_aula = ?`,[request.params.id_aula], function (error, results, fields) {
     if (error) throw error;
     // console.log('The solution is: ', results[0].solution);
     response.send(results)
