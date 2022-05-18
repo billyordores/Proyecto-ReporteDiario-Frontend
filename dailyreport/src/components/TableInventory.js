@@ -77,7 +77,6 @@ const TableInventory = () => {
               handleRowDelete(oldData, resolve);
             }),
         }}
-        style={{ width: "80%", margin: "0px 0px 0px 200px" }}
       />
     </div>
   );
