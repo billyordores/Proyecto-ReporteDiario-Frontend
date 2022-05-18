@@ -4,7 +4,6 @@ import { GetAulas } from "../../helpers/GetAulas"
 import PostInventoryAulas from "../../helpers/PostInventoryAulas";
 import { useState , useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
-// import Con
 
 const ModalInventoryAulas =(props)=> {
 
