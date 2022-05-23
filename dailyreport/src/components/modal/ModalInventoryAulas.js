@@ -4,12 +4,14 @@ import { GetAulas } from "../../helpers/GetAulas"
 import PostInventoryAulas from "../../helpers/PostInventoryAulas";
 import { useState , useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
+import '../../css/ModalInventory.css'
 
 const ModalInventoryAulas =(props)=> {
 
     const [listDropDown , setListDropDown ] = useState("")
     const [toggleObject , setToggleObject] = useState("")
     const [toggleAulas , setToggleAulas] = useState("")
+    const [addInventario, setAddInventario] = useState(false)
     const [object, setObject] = useState([]);
     const [aulas, setAulas] = useState([])
     const [idObjectAula, setIdObjectAula] = useState({
@@ -26,18 +28,19 @@ const ModalInventoryAulas =(props)=> {
     useEffect(()=>{
       GetAulas().then(response =>{
           setAulas(response)
-          console.log(response)  
+          // console.log(response)  
       })
     }, [setAulas])
 
     const addObjetoAula = () =>{
+      setAddInventario(true)
       setTimeout(()=>{
         PostInventoryAulas(idObjectAula.id_aula, idObjectAula.id_objeto).then(response => {
-          alert("Se ha añadido correctamente")
+          setAddInventario(false)
         })
-        setToggleAulas("")
-        setToggleObject("")
-      }, 3000)
+        // setToggleAulas("")
+        // setToggleObject("")
+      }, 500)
       
     }
 
@@ -97,6 +100,9 @@ const ModalInventoryAulas =(props)=> {
           <Button onClick={addObjetoAula} > Añadir </Button>
           <Button onClick={props.onHide}>Close</Button>
         </Modal.Footer>
+        {addInventario && (
+          <p className='exito' >Objeto añadido correctamente</p>
+        )}
       </Modal>
     );
   }

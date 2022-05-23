@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import VentanaModal from "./VentanaModal";
-import "../css/FiltClassroom.css";
 import { Field, Formik } from "formik";
 import { Container, Table } from "reactstrap";
 import { GetInventario } from "../helpers/getInventario";
+import '../css/modal.css'
 
 const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) => {
-  const { id_aula, nombre } = dataModal;
+  const { nombre } = dataModal;
   const [FormEnviado, setFormEnviado] = useState(false);
   const [inventario, setInventario] = useState({
     data: [],
@@ -49,6 +49,7 @@ const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) => {
                   <Table>
                     <thead>
                       <tr>
+                        <th>Id</th>
                         <th>Item</th>
                         <th>Bien</th>
                         <th>Mal</th>
@@ -60,6 +61,7 @@ const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) => {
                       {inventario.data.map((element) => {
                         return (
                           <tr>
+                            <th>{element.id_objeto}</th>
                             <th>{element.tipo_objeto}</th>
                             <td>
                               <Field
@@ -91,13 +93,13 @@ const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) => {
                     </tbody>
                   </Table>
                 </Container>
-                <button className="ClasBtn" type="submit">
-                  Enviar
-                </button>
-                <br></br>
                 {FormEnviado && (
                   <p className="exito">Inventario enviado con éxito!</p>
                 )}
+                <button className="Send" type="submit">
+                  Enviar
+                </button>
+                <br></br>
               </form>
             )}
           </Formik>

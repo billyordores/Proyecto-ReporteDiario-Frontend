@@ -25,24 +25,6 @@
     margin-bottom: 20px;
 }
 
-
-
-.Formulario label{
-    font-size: 25px;
-    padding: 0 0 10px 0;
-}
-
-.Formulario .exito {
-	text-align: center;
-	font-size: 20px;
-	padding-top: 20px;
-	color: #02a802;
-}
-
-.itemsForm{
-  overflow: hidden;
-}
-
 .ClasBtn{
     display: block;
     padding: 10px 30px;
@@ -58,9 +40,4 @@
 
 .ClasBtn:hover{
     background: #4f535a;
-}
-
-.error{
-    color: #ff0000;
-    text-align: center;
 }

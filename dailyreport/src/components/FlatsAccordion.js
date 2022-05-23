@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/BtnFlats.css";
+import "../css/FlatsAccordion.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilteredClassroom from "./FilteredClassroom";
 import { Accordion } from "react-bootstrap";

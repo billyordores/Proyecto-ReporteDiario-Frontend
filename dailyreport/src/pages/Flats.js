@@ -1,5 +1,5 @@
 import React from 'react'
-import BtnFlats from '../components/BtnFlats.js'
+import BtnFlats from '../components/FlatsAccordion.js'
 
 const Flats = () =>{
         return(

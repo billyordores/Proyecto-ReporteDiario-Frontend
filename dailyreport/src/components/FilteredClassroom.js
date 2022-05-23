@@ -1,6 +1,6 @@
 import React, { useEffect , useState } from "react"
 import { GetAulas } from "../helpers/GetAulas"
-import ModalComponent from "./modal"
+import ModalComponent from "./ModalComponent"
 import '../css/FiltClassroom.css'
 
 const FilteredClassroom = ({planta}) =>{
