@@ -14,7 +14,7 @@ function App() {
         <Route path='/chromebooks' element={<Chromebooks/>} />
 
         <Route path='/plantas' element={<Flats/>} />
-
+    
         <Route path='/inventario' element={<Inventory/>} />
       </Routes>
     </BrowserRouter>
