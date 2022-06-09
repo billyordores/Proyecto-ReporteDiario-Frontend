@@ -1,44 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../css/Login.css"
 
 const Login = () =>{
-    const username = document.getElementById('username')
-    const password = document.getElementById('password')
-    const button = document.getElementById('login')
+    
+    const [username,setUsername]=useState("")
+    const [password,setPassword]=useState("")
+    const user = "Jorge";
+    const pass = "Becario21";
 
-    button.addEventListener('click',(e)=>{
+    const ingresar =(e)=>{
         e.preventDefault()
-
-        const data={
-            username: username.value,
-            password: password.value
+        
+        if(password===pass & username===user){
+            console.log('Entraste con mi login :3')
         }
-        console.log(data)
-    })
+        else{
+            console.log('La contraseña o usuario ingresado es incorrecto')
+            // console.log(username,password)
+            // console.log(user,pass)
+        }
+    }
+    const alerta =()=>{
+        alert("Preguntale a tu gfe")
+    }
+
     return(
         <div>
-            <head>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-                integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-                crossorigin="anonymous" referrerpolicy="no-referrer" />
-            </head>
             <div className='login'>
         
             <form>
                 <h2 className='tituloLogin'>Inicio de sesión</h2>
+
                 <label to="usuario" className="ingreso">
                     <h3>Usuario</h3>
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" name="usuario" className="formUsuario" id='username'/>
+                    <input type="text" name="usuario" className="formUsuario" id='username' value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
                 </label>    
+
                 <label to="password" className="ingreso">
                     <h3>Contraseña</h3>
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" name="password" className="formPassword" id='password'/>
+                    
+                    <input type="password" name="password" className="formPassword" id='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 </label>
-                <a href='#' className="link">Olvidaste tu contraseña?</a>
-                
-                <button id='login'>Login</button>
+
+                <a href='#' className="link" onClick={alerta}>Olvidaste tu contraseña?</a>
+
+                <button onClick={ingresar}>Ingresar</button>
             </form>
             </div>
         </div>

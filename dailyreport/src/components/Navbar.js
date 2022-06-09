@@ -83,8 +83,8 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item active">
-            <NavLink className="nav-link" to="/" exact>
-              <i className="fa fa-laptop"></i>Login
+            <NavLink className="nav-link" to="/login" exact>
+              <i class="fa fa-solid fa-lock"></i>Login
             </NavLink>
           </li>
 
