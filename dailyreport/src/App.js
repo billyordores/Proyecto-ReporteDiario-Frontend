@@ -8,19 +8,16 @@ import Login from './pages/Login.js'
 function App() {
   return(
     <BrowserRouter>
-    <Navbar/>
-      <Routes>
+    <Login>
+      <Navbar/>
+        <Routes>
+          <Route path='/chromebooks' element={<Chromebooks/>} />
 
+          <Route path='/plantas' element={<Flats/>} />
         
-        <Route path='/chromebooks' element={<Chromebooks/>} />
-
-        <Route path='/plantas' element={<Flats/>} />
-    
-        <Route path='/inventario' element={<Inventory/>} />
-
-        <Route path='/login' element={<Login/>}/>
-
-      </Routes>
+          <Route path='/inventario' element={<Inventory/>} />
+        </Routes>
+    </Login>
     </BrowserRouter>
   )
 }
