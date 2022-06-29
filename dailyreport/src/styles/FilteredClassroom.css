@@ -1,0 +1,43 @@
+.ContButton{
+    padding: 15px;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Contenido h3{
+    padding: 0 0 10px 0;
+}
+
+.Contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.Contenido h1{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.Contenido p{
+    margin-bottom: 20px;
+}
+
+.ClasBtn{
+    display: block;
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: black;
+    border: none;
+    background: #9E9E9E ;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s ease all;
+    float: right;
+}
+
+.ClasBtn:hover{
+    background: #757575;
+}
