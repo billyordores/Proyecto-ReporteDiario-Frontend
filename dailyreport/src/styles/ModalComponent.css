@@ -16,7 +16,7 @@
     border-radius: 100px;
     color: black;
     border: none;
-    background: #999;
+    background: #27AE60;
     cursor: pointer;
     font-weight: 500;
     transition: .3s ease all;
@@ -24,7 +24,7 @@
 }
 
 .Send:hover{
-    background: #4f535a;
+    background: #078364;
 }
 
 .Formulario{

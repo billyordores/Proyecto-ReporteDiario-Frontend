@@ -4,9 +4,10 @@ import React from 'react';
 import { FcDepartment, FcInspection } from 'react-icons/fc'
 import { FaBuilding } from 'react-icons/fa'
 import {
-  MdChromeReaderMode,
+  MdSettingsApplications,
   MdAssignmentTurnedIn,
   MdComputer,
+  MdBuild
 } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import {
@@ -26,8 +27,10 @@ const sidebarBackground = {
 
 const navItems = [
   { to: '/', name: 'Plantas', exact: true, Icon: FaBuilding },
-  { to: '/chromebooks', name: 'Chromebooks', exact: false, Icon: MdComputer },
-  { to: '/inventario', name: 'Inventario', exact: false, Icon: MdAssignmentTurnedIn },
+  // { to: '/chromebooks', name: 'Chromebooks', exact: false, Icon: MdComputer },
+  // { to: '/inventario', name: 'Inventario', exact: false, Icon: MdAssignmentTurnedIn },
+  { to: '/herramientas', name: 'Herramientas', exact: false, Icon: MdSettingsApplications},
+  { to: '/pagina-pruebas', name: 'Pruebas', exact: false, Icon: MdBuild },
 ];
 
 const bem = bn.create('sidebar');

@@ -43,4 +43,6 @@ export const getThemeColors = () => [
   'info',
   'warning',
   'danger',
+  'crudtitle',
+  'deletecorrect',
 ];

@@ -20,17 +20,17 @@
 
 .tabs button:hover {
     color: black;
-    background-color: rgba(88, 88, 88, 0.377);
+    background-color: #5B6472;
 }
 
 .tabs button:disabled {
-    background: #515151;
+    background: #3F4650;
     color: white;
 }
 
 .content {
     padding: 25px 25px;
-    background-color: #EEEEEE;
+    background-color: #EFEEEE;
     line-height: 25px;
     font-size: 16px;
     text-align: justify;

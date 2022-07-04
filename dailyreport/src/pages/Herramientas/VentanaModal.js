@@ -1,14 +1,13 @@
 import React from "react";
-import '../styles/VentanaModal.css'
+import '../../styles/HerramientaModal.css'
 
 
 const VentanaModal = ({children, estado, cambiarEstado, titulo = 'Sin titulo'}) =>{
     return(
         <>
-        {estado &&
+        {estado && 
             <div className="overLay">
                 <div className="contenedorModal">
-
                     <div className="encabezadoModal" >
                         <h3>{titulo}</h3>
                     </div>

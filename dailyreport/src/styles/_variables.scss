@@ -13,14 +13,16 @@
 // $white: #fff;
 $theme-colors: (
   "notification" : #3C3C3C,
-  "userCard" : #B5B5B5,
-  "searchbar" : #666666,
+  "userCard" : #5B6472,
+  "searchbar" : #7F8082,
   "primary": #6a82fb,
   "secondary": #666666,
-  "success": #45b649,
-  "danger": #f85032,
+  "success": #27AE60,
+  "danger": #AF1B3F,
   "warning": #ffd700,
-  "info": #00c9ff
+  "info": #0085CF,
+  "crudtitle": #078364,
+  "deletecorrect": #227c48
 );
 
 $enable-gradients: true;

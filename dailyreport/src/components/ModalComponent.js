@@ -5,6 +5,7 @@ import { Container, Table } from "reactstrap";
 import { GetInventory } from '../helpers/GetInventory'
 import { FiSend } from 'react-icons/fi'
 import '../styles/ModalComponent.css'
+import { FcViewDetails } from 'react-icons/fc'
 
 const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) =>{
     const { Numero, Planta} = dataModal;

@@ -62,7 +62,6 @@ export const iconWidgetsData = [
 ];
 
 export const numberWidgetsData = [
-  { color: 'searchbar'},
   { color: 'primary' },
   { color: 'secondary' },
   { color: 'success' },

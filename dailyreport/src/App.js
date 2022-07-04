@@ -1,36 +1,40 @@
-import { MainLayout } from 'components/Layout';
+import { MainLayout } from './components/Layout';
 import PageSpinner from 'components/PageSpinner';
 import React from 'react';
 import componentQueries from 'react-component-queries';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './styles/reduction.scss';
+import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
 
-const Chromebooks = React.lazy(() => import('pages/ChromebooksPage'));
-const ChartPage = React.lazy(() => import('pages/InventarioPage'));
-const Plantas = React.lazy(() => import('pages/PlantasPage'));
-const Login = React.lazy(() => import('./pages/LoginPage') );
-const Error404 = React.lazy(() => import('./pages/PageNotFound'));
+const Chromebooks = React.lazy(() => import('./pages/Chromebooks/ChromebooksPage'));
+const InventarioPage = React.lazy(() => import('./pages/Inventario/InventarioPage'));
+const Plantas = React.lazy(() => import('./pages/Plantas-Aulas/PlantasPage'));
+const Herramientas = React.lazy(() => import('./pages/Herramientas/HerramientasPage'))
+const Pruebas = React.lazy(() => import('./pages/Pruebas/PruebasPage'))
 
 const getBasename = () => {
   return `/${process.env.PUBLIC_URL.split('/').pop()}`;
 };
 
 const App = (props) => {
-    return (
-      <BrowserRouter basename={getBasename()}>
-          <Switch>
-            <MainLayout breakpoint={props.breakpoint}>
-              <React.Suspense fallback={<PageSpinner />}>
-                <Route exact path="/" component={Plantas} />
-                <Route exact path="/chromebooks" component={Chromebooks} />
-                <Route exact path="/inventario" component={ChartPage} />
-                <Route exact path="/login" component={Login} />
-              </React.Suspense>
-            </MainLayout>
-            <Redirect to="/" />
-          </Switch>
-      </BrowserRouter>
-    );
+  return (
+    <BrowserRouter basename={getBasename()}>
+      <Switch>
+        <MainLayout breakpoint={props.breakpoint}>
+          <React.Suspense fallback={<PageSpinner />}>
+            <Toaster/>
+            <Route exact path="/" component={Plantas} />
+            <Route exact path="/chromebooks" component={Chromebooks} />
+            <Route exact path="/inventario" component={InventarioPage} />
+            <Route exact path="/herramientas" component={Herramientas} />
+            <Route exact path="/pagina-pruebas" component={Pruebas} />
+          </React.Suspense>
+        </MainLayout>
+        <Redirect to="/" />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 const query = ({ width }) => {

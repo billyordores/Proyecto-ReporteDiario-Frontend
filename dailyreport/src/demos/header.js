@@ -14,22 +14,5 @@ export const notificationsData = [
     message: 'Algunas funciones no se encuentran disponibles',
     date: '1 seconds ago',
   },
-  // {
-  //   id: 3,
-  //   avatar: user3Image,
-  //   message: 'Clark sent a pull request',
-  //   date: 'yesterday',
-  // },
-  // {
-  //   id: 4,
-  //   avatar: user4Image,
-  //   message: 'Alicia signed up',
-  //   date: '3 days ago',
-  // },
-  // {
-  //   id: 5,
-  //   avatar: user5Image,
-  //   message: 'Keith shared this article',
-  //   date: 'a week ago',
-  // },
+
 ];

@@ -53,6 +53,8 @@ NumberWidget.propTypes = {
     'danger',
     'light',
     'dark',
+    'crudtitle',
+    'deletecorrect',
   ]),
   progress: PropTypes.shape({
     value: PropTypes.number,

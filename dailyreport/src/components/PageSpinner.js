@@ -22,6 +22,8 @@ PageSpinner.propTypes = {
     'info',
     'light',
     'dark',
+    'crudtitle',
+    'deletecorrect'
   ]),
 };
 

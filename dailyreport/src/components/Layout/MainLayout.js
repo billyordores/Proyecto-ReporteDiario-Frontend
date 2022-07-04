@@ -1,4 +1,4 @@
-import { Content, Footer, Header, Sidebar } from 'components/Layout';
+import { Content, Footer, Header, Sidebar } from 'components/Layout'
 import React from 'react';
 import {
   MdSettings,
@@ -7,7 +7,7 @@ import {
 import NotificationSystem from 'react-notification-system';
 import { NOTIFICATION_SYSTEM_STYLE } from 'utils/constants';
 
-class MainLayout extends React.Component {
+class Notification extends React.Component {
   static isSidebarOpen() {
     return document
       .querySelector('.cr-sidebar')
@@ -31,8 +31,9 @@ class MainLayout extends React.Component {
     //   this.notificationSystem.addNotification({
     //     title: <MdQuestionAnswer />,
     //     message:
-    //       'La plataforma aún se encuentra en desarrollo',
+    //       'La plataforma se encuentra en desarrollo',
     //     level: 'info',
+    //     // success, error, warning, info
     //   });
     // }, 500);
 
@@ -54,7 +55,7 @@ class MainLayout extends React.Component {
   handleContentClick = event => {
     // close sidebar if sidebar is open and screen size is less than `md`
     if (
-      MainLayout.isSidebarOpen() &&
+      Notification.isSidebarOpen() &&
       (this.props.breakpoint === 'xs' ||
         this.props.breakpoint === 'sm' ||
         this.props.breakpoint === 'md')
@@ -92,7 +93,7 @@ class MainLayout extends React.Component {
       <main className="cr-app bg-light">
         <Sidebar />
         <Content fluid onClick={this.handleContentClick}>
-          <Header />
+            <Header />
           {children}
           <Footer />
         </Content>
@@ -109,4 +110,4 @@ class MainLayout extends React.Component {
   }
 }
 
-export default MainLayout;
+export default Notification;

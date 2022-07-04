@@ -1,7 +1,7 @@
-import FilteredClassroom from '../components/FilteredClassroom.js';
+import FilteredClassroom from '../../components/FilteredClassroom.js';
 import React, { useState } from 'react';
-import '../styles/PlantasPage.css'
-import Page from 'components/Page';
+import '../../styles/PlantasPage.css'
+import Page from '../../components/Page';
 import { Row} from 'reactstrap';
 
 const PlantasPage = () => {

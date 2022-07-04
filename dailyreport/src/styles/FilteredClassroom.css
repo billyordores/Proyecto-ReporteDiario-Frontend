@@ -31,7 +31,7 @@
     border-radius: 100px;
     color: black;
     border: none;
-    background: #9E9E9E ;
+    background: #7F8082 ;
     cursor: pointer;
     font-weight: 500;
     transition: .3s ease all;
@@ -39,5 +39,5 @@
 }
 
 .ClasBtn:hover{
-    background: #757575;
+    background: #5B6472;
 }

@@ -7,12 +7,6 @@ import { Card, CardTitle, CardSubtitle, CardText, CardBody } from 'reactstrap';
 
 import Avatar from '../Avatar';
 
-import { BiUser } from 'react-icons/bi'
-
-import { FaUserTie } from 'react-icons/fa'
-
-import { CgMail } from 'react-icons/cg'
-
 const UserCard = ({
   avatar,
   avatarSize,
@@ -29,10 +23,10 @@ const UserCard = ({
     <Card inverse className={classes} {...restProps}>
       <CardBody className="d-flex justify-content-center align-items-center flex-column">
         <Avatar src={avatar} size={avatarSize} className="mb-2" />
-        <CardTitle> {title}  <BiUser fontSize="15px" /> </CardTitle>
-        <CardSubtitle>{subtitle} <CgMail /> </CardSubtitle>
+        <CardTitle>{title}</CardTitle>
+        <CardSubtitle>{subtitle}</CardSubtitle>
         <CardText>
-          <small>{text}</small> <FaUserTie />
+          <small>{text}</small>
         </CardText>
       </CardBody>
       {children}
