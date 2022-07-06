@@ -1,112 +1,126 @@
 import React, { useEffect, useState } from "react";
-import VentanaModal from "./VentanaModal";
+import VentanaModal from './VentanaModal';
 import { Field, Formik } from "formik";
 import { Container, Table } from "reactstrap";
-import { GetInventario } from "../helpers/getInventario";
-import '../css/modal.css'
+import { GetInventory } from '../helpers/GetInventory'
+import { FiSend } from 'react-icons/fi'
+import '../styles/ModalComponent.css'
 
-const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) => {
-  const { nombre } = dataModal;
-  const [FormEnviado, setFormEnviado] = useState(false);
-  const [inventario, setInventario] = useState({
-    data: [],
-    loading: true,
-  });
+const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) =>{
+    const { Numero, Planta} = dataModal;
+    const [FormEnviado, setFormEnviado] = useState(false);
+    const [inventario, setInventario] = useState({
+        data: [],
+        loading: true,
+    });
 
-  useEffect(() => {
-    const func = async () => {
-      const data = await GetInventario(dataModal);
-      setInventario({
-        data: data,
-        loading: false,
-      });
-    };
-    func();
-  }, [dataModal]);
+    useEffect(() =>{
+        const func = async () => {
+            const data = await GetInventory(dataModal);
+            setInventario({
+                data: data,
+                loading: false,
+            });
+        };
+        func();
+    }, [dataModal]);
 
-  return (
-    <>
-      <VentanaModal
-        estado={estadoModal1}
-        cambiarEstado={cambiarEstadoModal1}
-        titulo={"Aula " + nombre}
-      >
+    return (
         <>
-          <Formik
-            initialValues={{}}
-            onSubmit={(valores, { resetForm }) => {
-              resetForm();
-              console.log("Inventario del aula " + nombre + " actualizado");
-              console.log(valores);
-
-              setFormEnviado(true);
-              setTimeout(() => setFormEnviado(false), 4000);
-            }}
+          <VentanaModal
+            estado={estadoModal1}
+            cambiarEstado={cambiarEstadoModal1}
+            titulo={"Aula " + Planta + "." + Numero}
           >
-            {({ handleSubmit }) => (
-              <form onSubmit={handleSubmit} className="Formulario">
-                <Container>
-                  <Table>
-                    <thead>
-                      <tr>
-                        <th>Id</th>
-                        <th>Item</th>
-                        <th>Bien</th>
-                        <th>Mal</th>
-                        <th>No hay</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      {inventario.data.map((element) => {
-                        return (
+            <>
+              <Formik
+                initialValues={{
+                  comentario: '',
+                }}
+                onSubmit={(valores, { resetForm }) => {
+                  resetForm();
+                  console.log(valores);
+    
+                  setFormEnviado(true);
+                  setTimeout(() => setFormEnviado(false), 4000);
+                }}
+              >
+                {({ handleSubmit, values, handleChange }) => (
+                  <form onSubmit={handleSubmit} className="Formulario">
+                    <Container>
+                      <Table>
+                        <thead>
                           <tr>
-                            <th>{element.id_objeto}</th>
-                            <th>{element.tipo_objeto}</th>
-                            <td>
-                              <Field
-                                className="field"
-                                type="radio"
-                                name={element.tipo_objeto}
-                                value="Bien"
-                              />
-                            </td>
-                            <td>
-                              <Field
-                                className="field"
-                                type="radio"
-                                name={element.tipo_objeto}
-                                value="Mal"
-                              />
-                            </td>
-                            <td>
-                              <Field
-                                className="field"
-                                type="radio"
-                                name={element.tipo_objeto}
-                                value="NoHay"
-                              />
-                            </td>
+                            <th>Id</th>
+                            <th>Item</th>
+                            <th>Bien</th>
+                            <th>Mal</th>
+                            <th>No hay</th>
                           </tr>
-                        );
-                      })}
-                    </tbody>
-                  </Table>
-                </Container>
-                {FormEnviado && (
-                  <p className="exito">Inventario enviado con éxito!</p>
+                        </thead>
+    
+                        <tbody>
+                          {inventario.data.map((element) => {
+                            return (
+                              <tr>
+                                <th>{element.id_objeto}</th>
+                                <th>{element.tipo_objeto}</th>
+                                <td>
+                                  <Field
+                                    className="field"
+                                    type="radio"
+                                    name={element.tipo_objeto}
+                                    value="Bien"
+                                  />
+                                </td>
+                                <td>
+                                  <Field
+                                    className="field"
+                                    type="radio"
+                                    name={element.tipo_objeto}
+                                    value="Mal"
+                                  />
+                                </td>
+                                <td>
+                                  <Field
+                                    className="field"
+                                    type="radio"
+                                    name={element.tipo_objeto}
+                                    value="NoHay"
+                                  />
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </Table>
+                      <br></br>
+                        <div>
+                          <input 
+                          type='text' 
+                          id="comentario" 
+                          name="comentario" 
+                          placeholder="Comentario" 
+                          value={values.comentario}
+                          onChange={handleChange}
+                          />
+                        </div>
+                    </Container>
+                    {FormEnviado && (
+                      <p className="exito">Inventario enviado con éxito!</p>
+                    )}
+                    <br></br>
+                    <button className="Send" type="submit">
+                      Enviar <FiSend />
+                    </button>
+                    <br></br>
+                  </form>
                 )}
-                <button className="Send" type="submit">
-                  Enviar
-                </button>
-                <br></br>
-              </form>
-            )}
-          </Formik>
+              </Formik>
+            </>
+          </VentanaModal>
         </>
-      </VentanaModal>
-    </>
-  );
-};
+      );
+}
 
-export default ModalComponent;
+export default ModalComponent

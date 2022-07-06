@@ -1,9 +1,0 @@
-.accordionClass .accordion-button{
-    position: initial;
-}
-
-
-.accordionClass .accordion-body{
-    display: flex;
-    flex-wrap: wrap;
-}
