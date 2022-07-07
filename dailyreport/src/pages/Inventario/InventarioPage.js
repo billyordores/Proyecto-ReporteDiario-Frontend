@@ -3,7 +3,7 @@ import '../../styles/page/Inventory.css'
 import Table from '../../components/Inventory/Table';
 import AddItem from '../../components/Inventory/AddItem';
 import Page from 'components/Page';
-const ChartPage = () => {
+const InventarioPage = () => {
   return (
     <>
       <Page title="Inventario" breadcrumbs={[{ name: 'Inventario', active: true }]}>
@@ -16,4 +16,4 @@ const ChartPage = () => {
   );
 };
 
-export default ChartPage;
+export default InventarioPage;
