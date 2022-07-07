@@ -1,21 +1,19 @@
 import React from 'react';
-
-import Page from '../../components/Page';
-import { Row } from 'reactstrap';
-
-const InventarioPage = () => {
+import '../../styles/page/Inventory.css'
+import Table from '../../components/Inventory/Table';
+import AddItem from '../../components/Inventory/AddItem';
+import Page from 'components/Page';
+const ChartPage = () => {
   return (
-    <Page
-      title="Inventario" 
-      breadcrumbs={[{ name: 'Inventario', active: true }]}>
-        
-
-        <Row>
-          <p>Esta pagina es para el inventario</p>
-        </Row>
-
-    </Page>
+    <>
+      <Page title="Inventario" breadcrumbs={[{ name: 'Inventario', active: true }]}>
+        <AddItem/>
+        <Table/>
+      </Page>
+      
+    </>   
+    
   );
 };
 
-export default InventarioPage;
+export default ChartPage;
