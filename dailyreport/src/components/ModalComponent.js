@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import VentanaModal from './VentanaModal';
 import { Field, Formik } from "formik";
 import { Container, Table } from "reactstrap";
-import { GetInventory } from '../helpers/GetInventory'
+import { GetClassroomById } from '../helpers/GetClassroomById'
 import { FiSend } from 'react-icons/fi'
 import '../styles/ModalComponent.css'
 import { FcViewDetails } from 'react-icons/fc'
@@ -17,7 +17,7 @@ const ModalComponent = ({ cambiarEstadoModal1, estadoModal1, dataModal }) =>{
 
     useEffect(() =>{
         const func = async () => {
-            const data = await GetInventory(dataModal);
+            const data = await GetClassroomById(dataModal);
             setInventario({
                 data: data,
                 loading: false,

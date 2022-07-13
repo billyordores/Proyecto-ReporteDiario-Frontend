@@ -1,5 +1,5 @@
 import React, { useEffect , useState } from "react"
-import { GetClassrooms } from '../helpers/GetClassrooms.js'
+import { GetClassrooms } from "../helpers/GetClassrooms.js";
 import ModalComponent from '../components/ModalComponent.js'
 import '../styles/FilteredClassroom.css'
 
