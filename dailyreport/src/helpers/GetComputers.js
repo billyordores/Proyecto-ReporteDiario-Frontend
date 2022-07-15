@@ -1,8 +1,8 @@
 import db_axios from './apiBackend/db_axios';
 
-export const GetClassrooms = () =>{
+export const GetComputers = () =>{
     return new Promise(async(resolve, reject) =>{
-        const {data} = await db_axios.get('/room');
+        const {data} = await db_axios.get('/computer');
         resolve(data);
     })
 }
