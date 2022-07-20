@@ -1,6 +1,6 @@
 import db_axios from "./apiBackend/db_axios";
 
-export const PostComputerRoom =(Aula_id, Ordenador_id, Herramienta_id)=>{
+export const PostComputerRoom = (Aula_id, Ordenador_id, Herramienta_id)=>{
 
     Herramienta_id.map(( {value} )=>{
         return new Promise(async(resolve, reject) =>{
