@@ -5,3 +5,22 @@
 .table{
     margin-top: 40px;
 }
+.search{
+    margin-top: 50px;
+    width: 10%;    
+    margin: auto; 
+    border: none;
+    border-radius: 5px; 
+}
+.container-search{
+    display:block;
+    margin-top: 20px;
+}
+input[type=text]:focus {
+    width: 40%;
+    border-color: azure;
+  }
+.icon-search{
+   width: 30px;
+   height: 30px;
+}
